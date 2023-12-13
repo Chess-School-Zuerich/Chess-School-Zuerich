@@ -1505,6 +1505,12 @@ input, select, textarea {
 
 		}
 
+#header {
+    padding-top: 3rem; /* Passen Sie diesen Wert nach Bedarf an */
+}
+
+
+
 /* Main */
 
 	#main {
