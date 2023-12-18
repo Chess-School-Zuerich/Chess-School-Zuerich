@@ -1305,6 +1305,10 @@ input, select, textarea {
 			#header .logo .icon:before {
 				font-size: 2rem;
 			}
+#header .logo:before,
+#header .logo:after {
+    display: none;
+}
 
 
 
