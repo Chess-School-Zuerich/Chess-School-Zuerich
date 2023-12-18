@@ -1,9 +1,3 @@
-/*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -399,3 +393,59 @@
 					});
 
 })(jQuery);
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var logo = document.querySelector('.logo');
+    var isSpinning = false;
+    var clickCount = 0;
+    var confirmBox = document.getElementById('customConfirmBox');
+    var confirmYes = document.getElementById('confirmYes');
+    var confirmNo = document.getElementById('confirmNo');
+
+    function showConfirmBox() {
+        confirmBox.style.display = 'block';
+    }
+
+   function showAnmelden() {
+    var anmeldenSection = document.getElementById('anmelden');
+    if (anmeldenSection) {
+        anmeldenSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
+    confirmYes.addEventListener('click', function() {
+        showAnmelden();
+        confirmBox.style.display = 'none';
+    });
+
+    confirmNo.addEventListener('click', function() {
+        confirmBox.style.display = 'none';
+    });
+
+    function toggleSpin() {
+        if (!isSpinning) {
+            logo.classList.add('spin');
+            isSpinning = true;
+            setTimeout(function() {
+                logo.classList.remove('spin');
+                isSpinning = false;
+
+                clickCount++;
+
+                if (clickCount === 4) {
+                    showConfirmBox();
+                    clickCount = 0;
+                }
+            }, 3000);
+        }
+    }
+
+    toggleSpin();
+    logo.addEventListener('click', toggleSpin);
+});
+
+
