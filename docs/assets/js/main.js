@@ -396,7 +396,6 @@
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var logo = document.querySelector('.logo');
     var isSpinning = false;
@@ -406,7 +405,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var confirmNo = document.getElementById('confirmNo');
 
     function showConfirmBox() {
-        confirmBox.style.display = 'block';
+        setTimeout(function() { // Verzögertes Anzeigen der Box
+            confirmBox.style.display = 'block';
+        }, 500); // 500 Millisekunden Verzögerung
     }
 
     // Direktes Scrollen zum Anmeldeformular beim Klick auf "Ja"
