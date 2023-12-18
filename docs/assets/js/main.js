@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showConfirmBox() {
         setTimeout(function() { // Verzögertes Anzeigen der Box
             confirmBox.style.display = 'block';
-        }, 500); // 500 Millisekunden Verzögerung
+        }, 3000); // 500 Millisekunden Verzögerung
     }
 
     // Direktes Scrollen zum Anmeldeformular beim Klick auf "Ja"
