@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         toggleSpin();
         logo.addEventListener('click', toggleSpin); // Fügt den Event-Listener hinzu, nachdem die erste Drehung beendet ist
-    }, 1000); // Verzögert den Start der Drehung um 1 Sekunde
+    }, 800); // Verzögert den Start der Drehung um 1 Sekunde
 
     // Event-Listener für das Logo, um die Anzahl der Klicks zu zählen
     logo.addEventListener('click', function() {
