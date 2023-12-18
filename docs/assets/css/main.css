@@ -1670,7 +1670,14 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-//Box für die bestätigung wenn man 4mal aufs Logo klickt
+
+
+
+
+
+
+
+
 #customConfirmBox {
     position: fixed;
     left: 50%;
@@ -1678,10 +1685,37 @@ input, select, textarea {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    max-width: 400px; /* Maximalbreite */
+    width: auto; /* Automatische Breite */
+    text-align: center; /* Zentrierter Text */
 }
+
+#customConfirmBox h2 {
+    font-size: 1.2em; /* Kleinere Schriftgröße für die Überschrift */
+    margin-bottom: 15px; /* Abstand unter der Überschrift */
+}
+
+#customConfirmBox button {
+    background-color: #4CAF50; /* Grüne Farbe für die Buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#customConfirmBox button:hover {
+    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+}
+
+
+
+
 
 
 
