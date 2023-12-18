@@ -1754,7 +1754,7 @@ input, select, textarea {
 
 
 .logo img:last-child {
-    z-index: 10000;
+    z-index: 100000;
     display: block;
 }
 
