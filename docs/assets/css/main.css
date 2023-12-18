@@ -1683,36 +1683,48 @@ input, select, textarea {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: orange; /* Orange Hintergrundfarbe */
+    color: black; /* Schwarze Schriftfarbe für bessere Lesbarkeit */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 400px; /* Maximalbreite */
-    width: auto; /* Automatische Breite */
-    text-align: center; /* Zentrierter Text */
+    max-width: 400px;
+    width: auto;
+    text-align: center;
 }
 
 #customConfirmBox h2 {
-    font-size: 1.2em; /* Kleinere Schriftgröße für die Überschrift */
-    margin-bottom: 15px; /* Abstand unter der Überschrift */
+    font-size: 1.4em; /* Leicht vergrößerte Schriftgröße */
+    margin-bottom: 15px;
 }
 
 #customConfirmBox button {
-    background-color: #4CAF50; /* Grüne Farbe für die Buttons */
-    color: white;
     border: none;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1em; /* Angepasste Schriftgröße für Buttons */
+    color: white; /* Weiße Schriftfarbe für bessere Lesbarkeit */
 }
 
-#customConfirmBox button:hover {
+#confirmYes {
+    background-color: #4CAF50; /* Grüne Farbe für den "Ja"-Button */
+}
+
+#confirmYes:hover {
     background-color: #45a049; /* Dunklerer Grünton beim Hover */
 }
 
+#confirmNo {
+    background-color: #f44336; /* Rote Farbe für den "Nein"-Button */
+}
+
+#confirmNo:hover {
+    background-color: #d32f2f; /* Dunklerer Rotton beim Hover */
+}
 
 
 
