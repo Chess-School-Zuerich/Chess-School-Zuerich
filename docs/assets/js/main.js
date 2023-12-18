@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Direktes Scrollen zum Anmeldeformular beim Klick auf "Ja"
     confirmYes.addEventListener('click', function() {
-        window.location.href = '#anmelden'; // Ändert den Hash in der URL
+        window.location.href = '#anmelden';
         confirmBox.style.display = 'none';
     });
 
@@ -426,18 +426,27 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 logo.classList.remove('spin');
                 isSpinning = false;
-
-                clickCount++;
-
-                if (clickCount === 4) {
-                    showConfirmBox();
-                    clickCount = 0;
-                }
-            }, 3000);
+            }, 3000); // Dauer der Drehung
         }
     }
 
-    toggleSpin();
-    logo.addEventListener('click', toggleSpin);
+    // Verzögertes Starten der Drehung des Logos beim ersten Laden der Seite
+    setTimeout(function() {
+        toggleSpin();
+        logo.addEventListener('click', toggleSpin); // Fügt den Event-Listener hinzu, nachdem die erste Drehung beendet ist
+    }, 1000); // Verzögert den Start der Drehung um 1 Sekunde
+
+    // Event-Listener für das Logo, um die Anzahl der Klicks zu zählen
+    logo.addEventListener('click', function() {
+        clickCount++;
+        if (clickCount === 4) {
+            showConfirmBox();
+            clickCount = 0; // Setzt den Zähler zurück
+        }
+    });
 });
+
+
+
+
 
