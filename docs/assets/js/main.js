@@ -447,5 +447,3 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleSpin();
     logo.addEventListener('click', toggleSpin);
 });
-
-
