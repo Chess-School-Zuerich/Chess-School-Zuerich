@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event-Listener für das Logo, um die Anzahl der Klicks zu zählen
     logo.addEventListener('click', function() {
         clickCount++;
-        if (clickCount === 4) {
+        if (clickCount === 2) {
             showConfirmBox();
             clickCount = 0; // Setzt den Zähler zurück
         }
