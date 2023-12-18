@@ -1684,7 +1684,7 @@ input, select, textarea {
 #customConfirmBox {
     position: fixed;
     left: 50%;
-    top: 60%;
+    top: 55%;
     transform: translate(-50%, -50%);
     background-color: #333; /* Dunkelgraue Hintergrundfarbe */
     color: white; /* Weiße Schriftfarbe für Kontrast */
