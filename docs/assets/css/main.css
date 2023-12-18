@@ -1298,7 +1298,7 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
+			border: none;
 			border-radius: 100%;
 		}
 
@@ -1669,3 +1669,52 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+//Box für die bestätigung wenn man 4mal aufs Logo klickt
+#customConfirmBox {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+
+
+
+
+
+@keyframes spinLogo {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.logo {
+    position: relative;
+}
+.logo img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.logo.spin img {
+    animation: spinLogo 3s linear 1; /* 1 Iteration statt infinite */
+}
+
+
+
+.logo img:last-child {
+    z-index: -1;
+    display: block;
+}
+
+
+
+
+
+
