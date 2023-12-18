@@ -409,16 +409,9 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'block';
     }
 
-   function showAnmelden() {
-    var anmeldenSection = document.getElementById('anmelden');
-    if (anmeldenSection) {
-        anmeldenSection.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-
+    // Direktes Scrollen zum Anmeldeformular beim Klick auf "Ja"
     confirmYes.addEventListener('click', function() {
-        showAnmelden();
+        window.location.href = '#anmelden'; // Ändert den Hash in der URL
         confirmBox.style.display = 'none';
     });
 
@@ -447,3 +440,4 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleSpin();
     logo.addEventListener('click', toggleSpin);
 });
+
