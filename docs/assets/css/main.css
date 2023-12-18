@@ -1676,26 +1676,24 @@ input, select, textarea {
 
 
 
-
-
 #customConfirmBox {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: orange; /* Orange Hintergrundfarbe */
-    color: black; /* Schwarze Schriftfarbe für bessere Lesbarkeit */
+    background-color: #333; /* Dunkelgraue Hintergrundfarbe */
+    color: white; /* Weiße Schriftfarbe für Kontrast */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 400px;
+    max-width: 600px; /* Vergrößerte maximale Breite */
     width: auto;
     text-align: center;
 }
 
 #customConfirmBox h2 {
-    font-size: 1.4em; /* Leicht vergrößerte Schriftgröße */
+    font-size: 1.4em;
     margin-bottom: 15px;
 }
 
@@ -1706,8 +1704,8 @@ input, select, textarea {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1em; /* Angepasste Schriftgröße für Buttons */
-    color: white; /* Weiße Schriftfarbe für bessere Lesbarkeit */
+    font-size: 1em;
+    color: white;
 }
 
 #confirmYes {
@@ -1715,7 +1713,7 @@ input, select, textarea {
 }
 
 #confirmYes:hover {
-    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+    background-color: #45a049;
 }
 
 #confirmNo {
@@ -1723,8 +1721,9 @@ input, select, textarea {
 }
 
 #confirmNo:hover {
-    background-color: #d32f2f; /* Dunklerer Rotton beim Hover */
+    background-color: #d32f2f;
 }
+
 
 
 
