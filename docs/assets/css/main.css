@@ -1687,7 +1687,7 @@ input, select, textarea {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    max-width: 600px; /* Vergrößerte maximale Breite */
+    max-width: 650px; /* Vergrößerte maximale Breite */
     width: auto;
     text-align: center;
 }
