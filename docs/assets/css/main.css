@@ -1799,7 +1799,7 @@ input, select, textarea {
   position: absolute;
     left: 60%; /* Oder ein spezifischer Wert in Pixeln */
     top: 60%; /* Oder ein spezifischer Wert in Pixeln */
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -60%);
 }
 
 .logo.spin img {
