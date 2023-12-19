@@ -1675,8 +1675,36 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+/* platzierung des Logos */
 
+.logo {
+    position: relative;
+    max-width: 20vw; /* Maximale Breite des Logos relativ zur Viewport-Breite */
+    height: auto;
+}
 
+.regular-logo, .mirror-logo {
+    width: 100%; /* Breite des Logos relativ zur umschließenden .logo-Div */
+    height: auto;
+    display: block; /* Stellt sicher, dass das Bild als Blockelement gerendert wird */
+}
+
+.mirror-logo {
+    display: none; /* Versteckt das gespiegelte Logo standardmäßig */
+}
+
+/* Media Queries für unterschiedliche Bildschirmgrößen */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 30vw; /* Vergrößern der Logo-Größe auf kleineren Bildschirmen */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 40vw; /* Weitere Anpassung für sehr kleine Bildschirme */
+    }
+}
 
 
 
