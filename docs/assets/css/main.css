@@ -1796,10 +1796,10 @@ input, select, textarea {
     border: 5px solid black;
     width: 263px; /* Standardbreite */
     height: auto; /* Höhe automatisch */
-    position: relative; /* Startposition */
-    left: 60%; /* Horizontal zentrieren */
-    top: 60%; /* Vertikal zentrieren */
-    transform: translate(-50%, -50%); /* Zentrierung korrigieren */
+  position: absolute;
+    left: 60%; /* Oder ein spezifischer Wert in Pixeln */
+    top: 60%; /* Oder ein spezifischer Wert in Pixeln */
+    transform: translate(-50%, -50%);
 }
 
 .logo.spin img {
