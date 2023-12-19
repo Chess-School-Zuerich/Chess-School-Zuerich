@@ -1510,8 +1510,23 @@ input, select, textarea {
 
 		}
 
+/* Standard-Style für den Header */
 #header {
-    padding-top: 4rem; /* Passen Sie diesen Wert nach Bedarf an */
+    padding-top: 4rem;
+}
+
+/* Media-Query für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+    #header {
+        padding-top: 3rem; /* geringere Höhe für kleinere Bildschirme */
+    }
+}
+
+/* Media-Query für sehr kleine Bildschirme */
+@media screen and (max-width: 480px) {
+    #header {
+        padding-top: 2rem; /* noch geringere Höhe für sehr kleine Bildschirme */
+    }
 }
 
 
