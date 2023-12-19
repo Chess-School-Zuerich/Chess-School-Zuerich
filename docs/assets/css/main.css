@@ -1774,10 +1774,17 @@ input, select, textarea {
 .logo {
     position: relative;
 }
+/* Logo-Stile */
 .logo img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     border: 5px solid black;
+    width: 263px; /* Standardbreite */
+    height: auto; /* Höhe automatisch */
+    position: relative; /* Startposition */
+    left: 50%; /* Horizontal zentrieren */
+    top: 50%; /* Vertikal zentrieren */
+    transform: translate(-50%, -50%); /* Zentrierung korrigieren */
 }
 
 .logo.spin img {
