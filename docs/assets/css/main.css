@@ -1782,8 +1782,8 @@ input, select, textarea {
     width: 263px; /* Standardbreite */
     height: auto; /* Höhe automatisch */
     position: relative; /* Startposition */
-    left: 55%; /* Horizontal zentrieren */
-    top: 55%; /* Vertikal zentrieren */
+    left: 51%; /* Horizontal zentrieren */
+    top: 51%; /* Vertikal zentrieren */
     transform: translate(-50%, -50%); /* Zentrierung korrigieren */
 }
 
