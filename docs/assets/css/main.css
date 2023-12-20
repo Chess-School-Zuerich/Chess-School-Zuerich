@@ -181,6 +181,7 @@ th, td {
     td {
         padding-left: 50%;
         position: relative;
+        padding-bottom: 1rem; /* Zusätzlicher Abstand am Ende jeder Zelle */
     }
 
     td:before {
@@ -210,7 +211,7 @@ th, td {
 
 /* Abstand nach den Überschriften hinzufügen */
 #preis h2.major {
-    margin-bottom: 2em; /* Erhöhter Abstand nach der Überschrift */
+    margin-bottom: 2em;
 }
 
 
