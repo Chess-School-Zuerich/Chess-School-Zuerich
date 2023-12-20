@@ -141,6 +141,12 @@ input, select, textarea {
 }
 
 
+
+
+
+
+
+
 /* Basis-Styles für die Tabelle */
 table {
     width: 100%;
@@ -161,7 +167,7 @@ th, td {
         display: none;
     }
 
-    #preis table tbody tr td {
+    #preis table tbody td {
         font-weight: normal;
     }
 
@@ -193,6 +199,11 @@ th, td {
         font-weight: bold;
     }
 
+    /* Fettschrift für Kategorien */
+    td:nth-of-type(1) {
+        font-weight: bold;
+    }
+
     /* Zuweisung von Datenbeschriftungen */
     td:nth-of-type(2):before { content: "Online"; }
     td:nth-of-type(3):before { content: "Zu Hause"; }
@@ -202,26 +213,6 @@ th, td {
         content: '';
         display: block;
         height: 1rem; /* Höhe des Abstandes */
-    }
-}
-
-/* Abstand nach den Überschriften hinzufügen */
-#preis h2.major {
-    margin-bottom: 2em;
-}
-
-    /* Zuweisung von Datenbeschriftungen */
-    td:nth-of-type(2):before { content: "Online"; }
-    td:nth-of-type(3):before { content: "Zu Hause"; }
-
-    #preis table tbody tr td:nth-child(2):before,
-    #preis table tbody tr td:nth-child(3):before {
-        font-weight: bold;
-    }
-
-    #preis table tbody tr td:nth-child(2),
-    #preis table tbody tr td:nth-child(3) {
-        font-weight: normal;
     }
 }
 
