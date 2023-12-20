@@ -157,6 +157,20 @@ th, td {
 
 /* Styles für mobile Ansicht */
 @media screen and (max-width: 768px) {
+    /* Anpassungen spezifisch für Ihre Tabelle */
+    #preis table thead th:first-child {
+        display: none;
+    }
+
+    #preis table tbody td:first-child {
+        display: none;
+    }
+
+    #preis table tbody tr td:nth-child(2) {
+        font-weight: bold;
+    }
+
+    /* Allgemeine mobile Anpassungen */
     table, thead, tbody, th, td, tr {
         display: block;
     }
@@ -196,6 +210,10 @@ th, td {
     td:nth-of-type(3):before { content: "Zu Hause"; }
 }
 
+/* Abstand nach den Überschriften hinzufügen */
+#preis h2.major {
+    margin-bottom: 1em; /* Ändern Sie den Wert nach Bedarf */
+}
 
 
 
