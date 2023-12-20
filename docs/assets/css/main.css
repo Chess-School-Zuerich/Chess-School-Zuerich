@@ -135,6 +135,13 @@ input, select, textarea {
 
 		}
 
+
+.welcome-message strong {
+    font-size: 24px; /* Setzen Sie hier die gewünschte Schriftgröße ein */
+}
+
+
+
 	body, input, select, textarea {
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
