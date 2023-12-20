@@ -158,12 +158,12 @@ th, td {
 /* Styles für mobile Ansicht */
 @media screen and (max-width: 768px) {
     /* Anpassungen spezifisch für Ihre Tabelle */
-    #preis table thead th:first-child {
+    #preis table thead th {
         display: none;
     }
 
-    #preis table tbody td:first-child {
-        display: none;
+    #preis table tbody tr td {
+        font-weight: normal;
     }
 
     #preis table tbody tr td:nth-child(2) {
@@ -173,12 +173,6 @@ th, td {
     /* Allgemeine mobile Anpassungen */
     table, thead, tbody, th, td, tr {
         display: block;
-    }
-
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
     }
 
     tr {
@@ -211,7 +205,7 @@ th, td {
 
 /* Abstand nach den Überschriften hinzufügen */
 #preis h2.major {
-    margin-bottom: 1em; /* Ändern Sie den Wert nach Bedarf */
+    margin-bottom: 2em; /* Erhöhter Abstand nach der Überschrift */
 }
 
 
