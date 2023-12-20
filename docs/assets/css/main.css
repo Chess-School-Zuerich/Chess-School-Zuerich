@@ -1746,10 +1746,17 @@ input, select, textarea {
 
 
 
+/*
+.logo img {
+  max-width: none;
+  width: 50%;}
+*/
 
 .logo img {
-  max-width: none; /* Entfernt die maximale Breite */
-  width: 50%;}
+    width: 20vw; 
+    max-width: 200px; 
+    height: auto; 
+}
 
 
 
