@@ -142,6 +142,56 @@ input, select, textarea {
 
 
 
+@media screen and (max-width: 600px) {
+    /* Stile für die Tabelle auf kleinen Bildschirmen */
+    #preis table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #preis th, #preis td {
+        /* Jede Zelle wird zu einem Blockelement */
+        display: block;
+        width: 100%;
+    }
+
+    #preis th {
+        /* Optional: Stile für die Kopfzeilen */
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    #preis td {
+        /* Stile für Datenzellen */
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    #preis td:before {
+        /* Fügt eine Beschriftung zu jeder Zelle hinzu */
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+    }
+
+    #preis tr {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    #preis tbody tr:last-child {
+        border-bottom: none;
+    }
+}
+
+
+
+
+
+
 
 	body, input, select, textarea {
 		color: #ffffff;
