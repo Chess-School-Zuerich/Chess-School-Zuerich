@@ -1789,17 +1789,16 @@ input, select, textarea {
 /* Container für das Logo */
 .logo {
     display: flex;
-    justify-content: center; /* Zentriert das Logo horizontal */
-    align-items: center; /* Zentriert das Logo vertikal */
-    width: 100%; /* Setzt die Breite des Containers auf 100% */
-    height: auto; /* Automatische Höhe basierend auf dem Inhalt */
-    margin: auto; /* Zentriert den Container */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
 }
 
 /* Logo Bild */
 .logo img {
-    max-width: 6000px; /* Maximale Breite des Logos */
-    width: 600%; /* Relative Breite des Logos */
+    max-width: 2000px; /* Maximale Breite des Logos */
+    width: 2000px; /* Direkte Angabe der Breite in Pixeln */
     height: auto; /* Höhe automatisch an die Breite anpassen */
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -1808,15 +1807,15 @@ input, select, textarea {
 
 @media (max-width: 768px) {
     .logo img {
-        max-width: 3000px; /* Reduzierte maximale Breite für kleinere Bildschirme */
-        width: 300%; /* Angepasste relative Breite */
+        max-width: 1500px;
+        width: 1500px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        max-width: 1500px; /* Weitere Reduzierung für sehr kleine Bildschirme */
-        width: 150%; /* Weitere Anpassung der relativen Breite */
+        max-width: 1000px;
+        width: 1000px;
     }
 }
 
