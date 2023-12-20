@@ -1789,21 +1789,21 @@ input, select, textarea {
 .logo {
     position: relative;
     display: flex;
-    justify-content: center; /* Zentriert das Logo horizontal */
-    align-items: center; /* Zentriert das Logo vertikal */
-    height: 10vh; /* Höhe des Logos relativ zur Bildschirmhöhe */
-    max-width: 20%; /* Maximale Breite des Logos */
-    margin: auto; /* Zentriert das Logo im umgebenden Element */
+    justify-content: center;
+    align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
+    height: 20vh; /* Erhöht die Höhe des Logos */
+    max-width: 30%; /* Erhöht die maximale Breite des Logos */
+    margin: auto;
 }
 
 .logo img {
-    width: 100%; /* Breite des Logos relativ zum umgebenden .logo-Element */
-    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
-    border-radius: 50%; /* Kreisförmiges Logo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Schatten für das Logo */
-    border: 5px solid black; /* Rand um das Logo */
-    max-width: 263px; /* Maximale absolute Breite des Logos */
-    position: relative; /* Relative Positionierung innerhalb des .logo-Containers */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 5px solid black;
+    max-width: 400px; /* Erhöht die maximale absolute Breite des Logos */
+    position: relative;
 }
 
 .logo.spin img {
