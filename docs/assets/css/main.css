@@ -1788,20 +1788,20 @@ input, select, textarea {
 
 .logo {
     position: absolute;
-    left: 50%;
-    bottom: 10%; /* Abstand vom unteren Rand */
-    transform: translate(-50%, 0);
-    width: 20vw; /* Breite des Logos relativ zur Bildschirmbreite */
-    height: auto; /* Höhe automatisch an die Breite anpassen */
-    max-width: 263px; /* Maximale Breite des Logos */
+    left: 50%; /* Zentriert das Logo horizontal */
+    bottom: 10%; /* Positioniert das Logo 10% vom unteren Rand */
+    transform: translate(-50%, 0); /* Verschiebt das Logo um die Hälfte seiner Breite nach links, um es wirklich zu zentrieren */
+    max-width: 30vw; /* Maximale Breite des Logos als Prozentsatz der Bildschirmbreite */
     min-width: 150px; /* Minimale Breite des Logos */
+    width: auto; /* Breite automatisch basierend auf der Höhe */
+    height: 20vh; /* Höhe des Logos als Prozentsatz der Bildschirmhöhe */
 }
 
 .logo img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Erhält die Kreisform bei */
+    width: 100%; /* Stellt sicher, dass das Bild die Breite des Elternelements (hier .logo) einnimmt */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
 }
+
 
 
 
