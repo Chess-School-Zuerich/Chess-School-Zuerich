@@ -210,9 +210,9 @@ Lerne von unseren erfahrenen Trainern und finde Anschluss in einer enthusiastisc
 						
 				
 						<!-- Contact -->
-							<article id="anmelden">
-								<h2 class="major">Anmelden</h2>
-								<form method="post" action="https://formspree.io/f/xbjnradv">
+<article id="anmelden">
+    <h2 class="major">Anmelden</h2>
+    <form id="contact-form">
         <div class="fields">
             <div class="field half">
                 <label for="name">Name</label>
@@ -226,12 +226,18 @@ Lerne von unseren erfahrenen Trainern und finde Anschluss in einer enthusiastisc
                 <label for="message">Nachricht</label>
                 <textarea name="message" id="message" rows="4" required></textarea>
             </div>
+            <!-- Zusätzliches Kontrollkästchen -->
+            <div class="field">
+                <input type="checkbox" id="more-info" name="more-info">
+                <label for="more-info">Ich möchte mehr Informationen erhalten</label>
+            </div>
         </div>
         <ul class="actions">
             <li><input type="submit" value="Send Message" class="primary" /></li>
             <li><input type="reset" value="Reset" /></li>
         </ul>
     </form>
+</article>
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -406,5 +412,45 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+
+
+<!-- jQuery hinzufügen, falls noch nicht vorhanden -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+		
+
+<!-- AJAX-Code für das Formular -->
+<script>
+$(document).ready(function() {
+    $('#contact-form').submit(function(event) {
+        event.preventDefault(); // Verhindern des normalen Formularversands
+
+        $.ajax({
+            url: 'https://formspree.io/f/xbjnradv', // Ihr Formspree-Endpunkt
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#contact-form :input').prop('disabled', true); // Deaktivieren aller Eingabefelder während des Sendens
+            },
+            success: function(response) {
+                alert('Nachricht erfolgreich gesendet!');
+                $('#contact-form').trigger("reset"); // Formular zurücksetzen
+                $('#contact-form :input').prop('disabled', false); // Eingabefelder wieder aktivieren
+            },
+            error: function(err) {
+                alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.');
+                $('#contact-form :input').prop('disabled', false); // Eingabefelder wieder aktivieren
+            }
+        });
+    });
+});
+</script>
+
+
+		
 	</body>
 </html>
