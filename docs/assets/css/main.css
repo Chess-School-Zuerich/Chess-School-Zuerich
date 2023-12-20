@@ -142,44 +142,60 @@ input, select, textarea {
 
 
 
+/* Basis-Styles für die Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Styles für mobile Ansicht */
 @media screen and (max-width: 768px) {
-    /* Stellt die Tabelle und ihre Zellen auf ein blockbasiertes Layout um */
-    table, thead, tbody, th, td, tr { 
-        display: block; 
+    table, thead, tbody, th, td, tr {
+        display: block;
     }
 
-    /* Versteckt die Kopfzeile auf kleinen Bildschirmen */
-    thead tr { 
+    thead tr {
         position: absolute;
         top: -9999px;
         left: -9999px;
     }
 
-    /* Stellt sicher, dass jede Zelle einen Rand hat */
-    tr { 
-        margin-bottom: 10px;
+    tr {
+        margin: 0 0 1rem 0;
     }
 
-    td { 
-        /* Fügt einen Rand hinzu und positioniert den Text so, dass er nicht von der pseudo-element-Überschrift überlappt wird */
-        border-bottom: 1px solid #eee; 
-        padding: 8px;
-        padding-left: 50%; 
-        text-align: left;
+    tr:nth-child(odd) {
+        background: #f9f9f9;
     }
 
-    td:before { 
-        /* Stellt die Positionierung der Zellenüberschrift ein */
+    td {
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td:before {
         position: absolute;
         top: 0;
         left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
+        width: 45%;
+        padding-right: 10px;
         white-space: nowrap;
-        content: attr(data-label);
         font-weight: bold;
     }
+
+    /* Zuweisung von Datenbeschriftungen */
+    td:nth-of-type(1):before { content: "Kategorie"; }
+    td:nth-of-type(2):before { content: "Online"; }
+    td:nth-of-type(3):before { content: "Zu Hause"; }
 }
+
 
 
 
