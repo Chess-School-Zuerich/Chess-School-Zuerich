@@ -147,80 +147,44 @@ input, select, textarea {
 
 
 
-/* Basis-Styles für die Tabelle */
-table {
-    width: 100%;
-    border-collapse: collapse;
+/* Verstecke die mobile Tabelle auf größeren Bildschirmen */
+.desktop-table {
+    display: block;
+}
+
+.mobile-table {
+    display: none;
+}
+
+/* Stile für die mobile Tabelle */
+.mobile-table-row {
     margin-bottom: 1rem;
 }
 
-th, td {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    text-align: left;
+.mobile-table-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-/* Styles für mobile Ansicht */
+.mobile-table-content p {
+    font-weight: bold;
+}
+
+.mobile-table-content ul {
+    margin-top: 0.5rem;
+    font-weight: normal;
+}
+
+/* Aktiviere die mobile Tabelle und verstecke die Desktop-Tabelle auf kleinen Bildschirmen */
 @media screen and (max-width: 768px) {
-    /* Anpassungen spezifisch für Ihre Tabelle */
-    #preis table thead th {
+    .desktop-table {
         display: none;
     }
 
-    #preis table tbody td {
-        font-weight: normal;
-    }
-
-    /* Allgemeine mobile Anpassungen */
-    table, thead, tbody, th, td, tr {
+    .mobile-table {
         display: block;
     }
-
-    tr {
-        margin: 0 0 1rem 0;
-    }
-
-    tr:nth-child(odd) {
-        background: #f9f9f9;
-    }
-
-    td {
-        padding-left: 50%;
-        position: relative;
-    }
-
-    td:before {
-        position: absolute;
-        top: 0;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        font-weight: bold;
-    }
-
-    /* Fettschrift für Kategorien */
-    td:nth-of-type(1) {
-        font-weight: bold;
-    }
-
-    /* Zuweisung von Datenbeschriftungen */
-    td:nth-of-type(2):before { content: "Online"; }
-    td:nth-of-type(3):before { content: "Zu Hause"; }
-
-    /* Einfügen eines Abstandes nach den Begriffen "Online" und "Zu Hause" */
-    td:nth-of-type(2):after, td:nth-of-type(3):after {
-        content: '';
-        display: block;
-        height: 1rem; /* Höhe des Abstandes */
-    }
 }
-
-/* Abstand nach den Überschriften hinzufügen */
-#preis h2.major {
-    margin-bottom: 2em;
-}
-
 
 
 
