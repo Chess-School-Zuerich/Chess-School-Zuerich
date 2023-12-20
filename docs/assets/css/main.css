@@ -1797,9 +1797,9 @@ input, select, textarea {
     width: 263px; /* Standardbreite */
     height: auto; /* Höhe automatisch */
   position: absolute;
-    left: 60%; /* Oder ein spezifischer Wert in Pixeln */
-    top: 60%; /* Oder ein spezifischer Wert in Pixeln */
-    transform: translate(-60%, -60%);
+    left: 50%; /* Oder ein spezifischer Wert in Pixeln */
+    top: 50%; /* Oder ein spezifischer Wert in Pixeln */
+    transform: translate(-50%, -50%);
 }
 
 .logo.spin img {
