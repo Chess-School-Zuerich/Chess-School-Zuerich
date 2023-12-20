@@ -1312,14 +1312,14 @@ input, select, textarea {
     display: none; /* Verhindert, dass der Strich im Logo angezeigt wird */
 }
 
-		/*   #header .content {
+		  #header .content {
 			border-style: solid;
 			border-color: #ffffff;
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
 		}
-/*
+
 			#header .content .inner {
 				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
 				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
