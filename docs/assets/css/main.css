@@ -1795,8 +1795,8 @@ input, select, textarea {
 }
 
 .logo img {
-    max-width: 2000px; /* Erhöht die maximale Breite des Logos auf 2000 Pixel */
-    width: 200%; /* Setzt die relative Breite auf 200% des umgebenden Containers */
+    max-width: 6000px; /* Erhöht die maximale Breite des Logos auf 6000 Pixel */
+    width: 600%; /* Setzt die relative Breite auf 600% des umgebenden Containers */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
