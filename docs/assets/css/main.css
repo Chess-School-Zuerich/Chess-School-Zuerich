@@ -1787,21 +1787,23 @@ input, select, textarea {
 }
 
 .logo {
-    position: absolute;
-    left: 50%; /* Zentriert das Logo horizontal */
-    bottom: 10%; /* Positioniert das Logo 10% vom unteren Rand entfernt */
-    transform: translate(-50%, 0); /* Verschiebt das Logo um die Hälfte seiner Breite nach links für echte Zentrierung */
-    max-width: 30vw; /* Maximale Breite des Logos in Bezug auf die Breite des Viewports */
-    width: auto; /* Breite automatisch basierend auf der Höhe */
-    height: 20vh; /* Höhe des Logos in Bezug auf die Höhe des Viewports */
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
+    height: 20vh; /* Erhöht die Höhe des Logos */
+    max-width: 30%; /* Erhöht die maximale Breite des Logos */
+    margin: auto;
 }
 
 .logo img {
-    width: 100%; /* Stellt sicher, dass das Bild die Breite des Elternelements (.logo) einnimmt */
-    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 5px solid black;
+    max-width: 400px; /* Erhöht die maximale absolute Breite des Logos */
+    position: relative;
 }
 
 
