@@ -1786,23 +1786,38 @@ input, select, textarea {
     100% { transform: rotateY(360deg); }
 }
 
+/* Container für das Logo */
 .logo {
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
-    margin: auto;
-    max-width: 80vw; /* Erhöht die maximale Breite des Logos relativ zur Viewport-Breite */
+    justify-content: center; /* Zentriert das Logo horizontal */
+    align-items: center; /* Zentriert das Logo vertikal */
+    width: 100%; /* Setzt die Breite des Containers auf 100% */
+    height: auto; /* Automatische Höhe basierend auf dem Inhalt */
+    margin: auto; /* Zentriert den Container */
 }
 
+/* Logo Bild */
 .logo img {
-    max-width: 6000px; /* Behält die maximale Breite des Logos bei 6000 Pixel bei */
-    width: 600%; /* Setzt die relative Breite auf 600% des umgebenden Containers */
-    height: auto;
+    max-width: 6000px; /* Maximale Breite des Logos */
+    width: 600%; /* Relative Breite des Logos */
+    height: auto; /* Höhe automatisch an die Breite anpassen */
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 5px solid black;
-    position: relative;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 3000px; /* Reduzierte maximale Breite für kleinere Bildschirme */
+        width: 300%; /* Angepasste relative Breite */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-width: 1500px; /* Weitere Reduzierung für sehr kleine Bildschirme */
+        width: 150%; /* Weitere Anpassung der relativen Breite */
+    }
 }
 
 
