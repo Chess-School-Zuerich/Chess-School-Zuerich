@@ -1820,7 +1820,17 @@ input, select, textarea {
 }
 
 
+/* neue regel evtl alles oben löschen /*
+#header .logo {
+  width: auto; /* Entfernen der festen Größenbegrenzung */
+  height: auto; /* Erlaubt dem Logo, seine natürliche Größe anzunehmen */
+}
 
+.logo img {
+  max-width: none; /* Entfernt die maximale Breite */
+  width: 10rem; /* Setzen Sie dies auf die gewünschte Größe */
+  height: auto; /* Behält das Seitenverhältnis bei */
+}
 
 
 
