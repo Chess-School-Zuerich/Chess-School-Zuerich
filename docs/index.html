@@ -209,28 +209,67 @@ Lerne von unseren erfahrenen Trainern und finde Anschluss in einer enthusiastisc
 
 
 						
-				
-						<!-- Contact -->
+				<!-- Contact -->
 <article id="anmelden">
     <h2 class="major">Anmelden</h2>
     <form id="contact-form">
         <div class="fields">
+            <!-- Vorname -->
             <div class="field half">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
+                <label for="first-name">Vorname</label>
+                <input type="text" name="first-name" id="first-name" required />
             </div>
+            <!-- Nachname -->
             <div class="field half">
-                <label for="email">Email</label>
+                <label for="last-name">Nachname</label>
+                <input type="text" name="last-name" id="last-name" required />
+            </div>
+            <!-- Alter -->
+            <div class="field half">
+                <label for="age">Dein Alter (oder das des Schülers)</label>
+                <input type="number" name="age" id="age" />
+            </div>
+            <!-- Adresse -->
+            <div class="field">
+                <label for="address">Adresse (nur nötig, wenn Unterricht zuhause gewünscht wird)</label>
+                <input type="text" name="address" id="address" placeholder="Straße, Wohnort, Postleitzahl" />
+            </div>
+            <!-- E-Mail Adresse -->
+            <div class="field half">
+                <label for="email">E-Mail Adresse</label>
                 <input type="email" name="_replyto" id="email" required />
             </div>
-            <div class="field">
-                <label for="message">Nachricht</label>
-                <textarea name="message" id="message" rows="4" required></textarea>
+            <!-- Handy Nummer -->
+            <div class="field half">
+                <label for="phone">Handy Nummer (für alle Fälle, optional)</label>
+                <input type="tel" name="phone" id="phone" />
             </div>
-            <!-- Zusätzliches Kontrollkästchen -->
+            <!-- Gratis Schnupperstunde -->
+            <div class="field half">
+                <label>Möchtest du eine gratis Schnupperstunde?</label>
+                <input type="radio" id="trial-yes" name="trial" value="yes">
+                <label for="trial-yes">Ja</label>
+                <input type="radio" id="trial-no" name="trial" value="no">
+                <label for="trial-no">Nein</label>
+            </div>
+            <!-- Schachniveau -->
             <div class="field">
-                <input type="checkbox" id="more-info" name="more-info">
-                <label for="more-info">Ich möchte mehr Informationen erhalten</label>
+                <label>Schachniveau:</label>
+                <input type="radio" id="beginner" name="level" value="beginner">
+                <label for="beginner">Anfänger</label>
+                <input type="radio" id="elo-1000" name="level" value="elo-1000">
+                <label for="elo-1000">ELO 1000+</label>
+                <input type="radio" id="elo-1500" name="level" value="elo-1500">
+                <label for="elo-1500">ELO 1500+</label>
+                <input type="radio" id="elo-2000" name="level" value="elo-2000">
+                <label for="elo-2000">ELO 2000+</label>
+                <input type="radio" id="no-idea" name="level" value="no-idea">
+                <label for="no-idea">Keine Ahnung 🤷</label>
+            </div>
+            <!-- Zusätzliche Nachricht -->
+            <div class="field">
+                <label for="additional-message">Wenn es Weiteres gibt, das wir über dich wissen sollten, du uns etwas fragen willst, eine Anregung hast oder uns sonst etwas mitteilen möchtest:</label>
+                <textarea name="additional-message" id="additional-message" rows="4"></textarea>
             </div>
         </div>
         <ul class="actions">
@@ -239,6 +278,7 @@ Lerne von unseren erfahrenen Trainern und finde Anschluss in einer enthusiastisc
         </ul>
     </form>
 </article>
+
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
