@@ -1789,17 +1789,20 @@ input, select, textarea {
 .logo {
     position: absolute;
     left: 50%;
-    bottom: 10%; /* Oder der gewünschte Abstand vom unteren Rand */
-    transform: translateX(-50%);
-    max-width: 20vw; /* Maximale Breite des Logos relativ zur Bildschirmbreite */
-    height: auto;
+    bottom: 10%; /* Abstand vom unteren Rand */
+    transform: translate(-50%, 0);
+    width: 20vw; /* Breite des Logos relativ zur Bildschirmbreite */
+    height: auto; /* Höhe automatisch an die Breite anpassen */
+    max-width: 263px; /* Maximale Breite des Logos */
+    min-width: 150px; /* Minimale Breite des Logos */
 }
 
 .logo img {
     width: 100%;
     height: auto;
-    border-radius: 50%; /* Behält die Kreisform bei */
+    border-radius: 50%; /* Erhält die Kreisform bei */
 }
+
 
 
 .logo.spin img {
