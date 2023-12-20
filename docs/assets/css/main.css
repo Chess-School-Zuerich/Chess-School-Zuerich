@@ -1787,7 +1787,7 @@ input, select, textarea {
     100% { transform: rotateY(360deg); }
 }
 
-/* Container für das Logo */
+/*
 .logo {
     display: flex;
     justify-content: center;
@@ -1796,7 +1796,7 @@ input, select, textarea {
     margin: auto;
 }
 
-/* Logo Bild */
+
 .logo img {
     max-width: 500px; /* Maximale Breite des Logos auf ein Viertel reduziert */
     width: 500px; /* Direkte Angabe der Breite in Pixeln auf ein Viertel reduziert */
@@ -1821,7 +1821,7 @@ input, select, textarea {
 }
 
 
-
+*/
 
 
 
