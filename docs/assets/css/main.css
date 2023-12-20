@@ -1754,8 +1754,9 @@ input, select, textarea {
 
 .logo img {
     width: 20vw; 
+    min-width: 100px; 
     max-width: 200px; 
-    height: auto; 
+    height: auto;
 }
 
 
