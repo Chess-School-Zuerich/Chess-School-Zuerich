@@ -181,7 +181,6 @@ th, td {
     td {
         padding-left: 50%;
         position: relative;
-        padding-bottom: 1rem; /* Zusätzlicher Abstand am Ende jeder Zelle */
     }
 
     td:before {
@@ -193,6 +192,23 @@ th, td {
         white-space: nowrap;
         font-weight: bold;
     }
+
+    /* Zuweisung von Datenbeschriftungen */
+    td:nth-of-type(2):before { content: "Online"; }
+    td:nth-of-type(3):before { content: "Zu Hause"; }
+
+    /* Einfügen eines Abstandes nach den Begriffen "Online" und "Zu Hause" */
+    td:nth-of-type(2):after, td:nth-of-type(3):after {
+        content: '';
+        display: block;
+        height: 1rem; /* Höhe des Abstandes */
+    }
+}
+
+/* Abstand nach den Überschriften hinzufügen */
+#preis h2.major {
+    margin-bottom: 2em;
+}
 
     /* Zuweisung von Datenbeschriftungen */
     td:nth-of-type(2):before { content: "Online"; }
