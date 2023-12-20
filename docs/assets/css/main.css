@@ -1272,7 +1272,7 @@ input, select, textarea {
 		}
 
 			#header > *:before {
-				content: '';
+				/*content: '';*/
 				display: block;
 				position: absolute;
 				top: calc(-3.5rem - 1px);
@@ -1290,7 +1290,7 @@ input, select, textarea {
 				display: none;
 			}
 
-		#header .logo {
+	/*	#header .logo {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
@@ -1309,9 +1309,9 @@ input, select, textarea {
 
 
 #header .logo:before {
-    display: none; /* Verhindert, dass der Strich im Logo angezeigt wird */
+    display: none; 
 }
-
+*/
 		  #header .content {
 			border-style: solid;
 			border-color: #ffffff;
@@ -1796,11 +1796,11 @@ input, select, textarea {
     margin: auto;
 }
 
-
+/*
 .logo img {
-    max-width: 500px; /* Maximale Breite des Logos auf ein Viertel reduziert */
-    width: 500px; /* Direkte Angabe der Breite in Pixeln auf ein Viertel reduziert */
-    height: auto; /* Höhe automatisch an die Breite anpassen */
+    max-width: 500px; 
+    width: 500px; 
+    height: auto; 
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 5px solid black;
@@ -1821,7 +1821,7 @@ input, select, textarea {
 }
 
 
-
+*/
 
 
 
@@ -1837,17 +1837,17 @@ input, select, textarea {
 }
 
 
-/* neue regel evtl alles oben löschen /*
+/* 
 #header .logo {
   width: auto; /* Entfernen der festen Größenbegrenzung */
   height: auto; /* Erlaubt dem Logo, seine natürliche Größe anzunehmen */
 }
+*/
+
 
 .logo img {
   max-width: none; /* Entfernt die maximale Breite */
-  width: 10rem; /* Setzen Sie dies auf die gewünschte Größe */
-  height: auto; /* Behält das Seitenverhältnis bei */
-}
+  width: 50%;}
 
 
 
