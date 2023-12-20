@@ -1791,20 +1791,19 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
-    height: 25vh; /* Erhöht die Höhe des Logos für größere Bildschirme */
-    max-width: 35%; /* Erhöht die maximale Breite des Logos */
     margin: auto;
 }
 
 .logo img {
-    width: 100%;
+    max-width: 400px; /* Maximale Breite des Logos in Pixel */
+    width: 30%; /* Relative Breite bezogen auf den umgebenden Container */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 5px solid black;
-    max-width: 500px; /* Erhöht die maximale absolute Breite des Logos */
     position: relative;
 }
+
 
 
 
