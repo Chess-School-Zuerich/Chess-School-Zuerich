@@ -1797,8 +1797,8 @@ input, select, textarea {
 
 /* Logo Bild */
 .logo img {
-    max-width: 2000px; /* Maximale Breite des Logos */
-    width: 2000px; /* Direkte Angabe der Breite in Pixeln */
+    max-width: 500px; /* Maximale Breite des Logos auf ein Viertel reduziert */
+    width: 500px; /* Direkte Angabe der Breite in Pixeln auf ein Viertel reduziert */
     height: auto; /* Höhe automatisch an die Breite anpassen */
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -1807,17 +1807,18 @@ input, select, textarea {
 
 @media (max-width: 768px) {
     .logo img {
-        max-width: 1500px;
-        width: 1500px;
+        max-width: 375px;
+        width: 375px;
     }
 }
 
 @media (max-width: 480px) {
     .logo img {
-        max-width: 1000px;
-        width: 1000px;
+        max-width: 250px;
+        width: 250px;
     }
 }
+
 
 
 
