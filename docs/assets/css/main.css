@@ -1691,7 +1691,7 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* platzierung des Logos */
+/*
 
 .logo {
     position: relative;
@@ -1723,7 +1723,7 @@ input, select, textarea {
 }
 
 
-
+/*
 
 #customConfirmBox {
     position: fixed;
@@ -1787,7 +1787,7 @@ input, select, textarea {
     100% { transform: rotateY(360deg); }
 }
 
-/*
+
 .logo {
     display: flex;
     justify-content: center;
@@ -1821,7 +1821,7 @@ input, select, textarea {
 }
 
 
-*/
+
 
 
 
