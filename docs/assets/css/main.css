@@ -1792,10 +1792,11 @@ input, select, textarea {
     justify-content: center;
     align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
     margin: auto;
+    max-width: 80vw; /* Erhöht die maximale Breite des Logos relativ zur Viewport-Breite */
 }
 
 .logo img {
-    max-width: 6000px; /* Erhöht die maximale Breite des Logos auf 6000 Pixel */
+    max-width: 6000px; /* Behält die maximale Breite des Logos bei 6000 Pixel bei */
     width: 600%; /* Setzt die relative Breite auf 600% des umgebenden Containers */
     height: auto;
     border-radius: 50%;
@@ -1803,6 +1804,7 @@ input, select, textarea {
     border: 5px solid black;
     position: relative;
 }
+
 
 
 
