@@ -1791,8 +1791,8 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: flex-end; /* Logo wird am unteren Rand des Containers ausgerichtet */
-    height: 20vh; /* Erhöht die Höhe des Logos */
-    max-width: 30%; /* Erhöht die maximale Breite des Logos */
+    height: 25vh; /* Erhöht die Höhe des Logos für größere Bildschirme */
+    max-width: 35%; /* Erhöht die maximale Breite des Logos */
     margin: auto;
 }
 
@@ -1802,10 +1802,9 @@ input, select, textarea {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 5px solid black;
-    max-width: 400px; /* Erhöht die maximale absolute Breite des Logos */
+    max-width: 500px; /* Erhöht die maximale absolute Breite des Logos */
     position: relative;
 }
-
 
 
 
