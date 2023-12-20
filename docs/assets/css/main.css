@@ -1788,18 +1788,22 @@ input, select, textarea {
 
 .logo {
     position: relative;
+    display: flex;
+    justify-content: center; /* Zentriert das Logo horizontal */
+    align-items: center; /* Zentriert das Logo vertikal */
+    height: 10vh; /* Höhe des Logos relativ zur Bildschirmhöhe */
+    max-width: 20%; /* Maximale Breite des Logos */
+    margin: auto; /* Zentriert das Logo im umgebenden Element */
 }
-/* Logo-Stile */
+
 .logo img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    border: 5px solid black;
-    width: 263px; /* Standardbreite */
-    height: auto; /* Höhe automatisch */
-  position: absolute;
-    left: 50%; /* Oder ein spezifischer Wert in Pixeln */
-    top: 50%; /* Oder ein spezifischer Wert in Pixeln */
-    transform: translate(-50%, -50%);
+    width: 100%; /* Breite des Logos relativ zum umgebenden .logo-Element */
+    height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    border-radius: 50%; /* Kreisförmiges Logo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Schatten für das Logo */
+    border: 5px solid black; /* Rand um das Logo */
+    max-width: 263px; /* Maximale absolute Breite des Logos */
+    position: relative; /* Relative Positionierung innerhalb des .logo-Containers */
 }
 
 .logo.spin img {
