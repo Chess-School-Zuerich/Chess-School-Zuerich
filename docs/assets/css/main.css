@@ -137,8 +137,9 @@ input, select, textarea {
 
 
 .welcome-message strong {
-    font-size: 18px; /* Setzen Sie hier die gewünschte Schriftgröße ein */
+    font-size: 1.5em; /* Relative Schriftgröße */
 }
+
 
 
 
