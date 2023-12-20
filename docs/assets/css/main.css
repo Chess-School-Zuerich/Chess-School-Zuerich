@@ -141,7 +141,6 @@ input, select, textarea {
 }
 
 
-
 /* Basis-Styles für die Tabelle */
 table {
     width: 100%;
@@ -164,10 +163,6 @@ th, td {
 
     #preis table tbody tr td {
         font-weight: normal;
-    }
-
-    #preis table tbody tr td:nth-child(2) {
-        font-weight: bold;
     }
 
     /* Allgemeine mobile Anpassungen */
@@ -201,6 +196,16 @@ th, td {
     /* Zuweisung von Datenbeschriftungen */
     td:nth-of-type(2):before { content: "Online"; }
     td:nth-of-type(3):before { content: "Zu Hause"; }
+
+    #preis table tbody tr td:nth-child(2):before,
+    #preis table tbody tr td:nth-child(3):before {
+        font-weight: bold;
+    }
+
+    #preis table tbody tr td:nth-child(2),
+    #preis table tbody tr td:nth-child(3) {
+        font-weight: normal;
+    }
 }
 
 /* Abstand nach den Überschriften hinzufügen */
