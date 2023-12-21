@@ -421,17 +421,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-	
+var logoContainer = document.querySelector('.logo-container');
+var logo = document.querySelector('.logo');
+var isSpinning = false;
+
 function handleAnimationEnd() {
     logoContainer.style.transform = 'scale(1)'; // Verkleinerung nach Ende der Drehung
     logo.classList.remove('spin');
     isSpinning = false;
-    logo.removeEventListener('animationend', handleAnimationEnd);
 }
 
 function toggleSpin() {
-    var logoContainer = document.querySelector('.logo-container');
-    var logo = document.querySelector('.logo');
     if (!isSpinning) {
         logoContainer.style.transform = 'scale(1.05)'; // Beginn der Vergrößerung
         logo.classList.add('spin');
@@ -439,6 +439,7 @@ function toggleSpin() {
         logo.addEventListener('animationend', handleAnimationEnd);
     }
 }
+
 
 
 
