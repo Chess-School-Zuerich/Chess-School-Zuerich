@@ -394,12 +394,11 @@
 
 })(jQuery);
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
     var isSpinning = false;
-    var isBoxShown = false;
+    var confirmBoxShown = false;
 
     var confirmBox = document.getElementById('customConfirmBox');
     var confirmYes = document.getElementById('confirmYes');
@@ -407,10 +406,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var clickCount = 0;
 
     function showConfirmBox() {
-        setTimeout(function() {
-            confirmBox.style.display = 'block';
-            isBoxShown = true;
-        }, 3000); // 500 Millisekunden Verzögerung
+        if (!confirmBoxShown) {
+            setTimeout(function() {
+                confirmBox.style.display = 'block';
+                confirmBoxShown = true; // Verhindert erneute Anzeige der Bestätigungsbox
+            }, 3000); // 500 Millisekunden Verzögerung
+        }
     }
 
     confirmYes.addEventListener('click', function() {
@@ -427,7 +428,6 @@ document.addEventListener('DOMContentLoaded', function() {
         logoContainer.style.transform = 'scale(1)'; // Verkleinerung
         logo.classList.remove('spin');
         isSpinning = false;
-        isBoxShown = false;
         logo.removeEventListener('animationend', handleAnimationEnd);
     }
 
@@ -441,21 +441,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    setTimeout(function() {
+        toggleSpin();
+    }, 800);
+
     logo.addEventListener('click', function() {
-        if (!isSpinning && !isBoxShown) {
+        if (!isSpinning) {
             toggleSpin();
             clickCount++;
-            if (clickCount === 2) {
+            if (clickCount === 2 && !confirmBoxShown) {
                 showConfirmBox();
-                clickCount = 0;
             }
         }
     });
-
-    // Starte die erste Drehung des Logos beim Laden der Seite
-    setTimeout(toggleSpin, 800);
 });
-
 
 
 
