@@ -420,16 +420,20 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'none';
     });
 
-    function toggleSpin() {
-        if (!isSpinning) {
-            logo.classList.add('spin');
-            isSpinning = true;
-            setTimeout(function() {
-                logo.classList.remove('spin');
-                isSpinning = false;
-            }, 3000); // Dauer der Drehung
-        }
+   function toggleSpin() {
+    if (!isSpinning) {
+        logo.style.transform = 'scale(1.05)'; // Vergrößerung vor der Drehung
+        logo.style.filter = 'brightness(90%)'; // Beibehaltung der Verdunklung
+        logo.classList.add('spin');
+        isSpinning = true;
+        setTimeout(function() {
+            logo.style.transform = 'scale(1)'; // Zurücksetzen der Größe nach der Drehung
+            logo.style.filter = ''; // Entfernen der Verdunklung nach der Drehung
+            logo.classList.remove('spin');
+            isSpinning = false;
+        }, 3000); // Dauer der Drehung
     }
+}
 
     // Verzögertes Starten der Drehung des Logos beim ersten Laden der Seite
     setTimeout(function() {
