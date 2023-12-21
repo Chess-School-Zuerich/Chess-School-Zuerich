@@ -1732,7 +1732,7 @@ input, select, textarea {
   transform: translate(-50%, -50%) rotate(0deg); /* Startrotation */
 	opacity: 0;
   animation: blink 20s infinite; /* Kürzere Gesamtdauer der Animation */
- animation-delay: 30s; /* Verzögerung beim ersten Start */
+ animation-delay: 20s; /* Verzögerung beim ersten Start */
 }
 
 
@@ -1868,5 +1868,5 @@ input, select, textarea {
 }
 
 .logo img:hover {
-    filter: brightness(90%); /* Leichte Verdunklung */
+    filter: brightness(80%); /* Leichte Verdunklung */
 }
