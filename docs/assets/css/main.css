@@ -1723,7 +1723,7 @@ input, select, textarea {
   left: 50%;
   width: 30px;  /* oder die gewünschte Größe */
   height: 30px; /* oder die gewünschte Größe */
-  background-image: url('/star-icon.png'); /* Pfad zum Sternchen-Bild */
+  background-image: url('star-icon.png'); /* Pfad zum Sternchen-Bild */
   background-size: cover;
   background-repeat: no-repeat;
   transform: translate(-50%, -50%);
