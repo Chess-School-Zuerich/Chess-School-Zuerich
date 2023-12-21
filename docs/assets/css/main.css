@@ -1732,7 +1732,7 @@ input, select, textarea {
   transform: translate(-50%, -50%) rotate(0deg); /* Startrotation */
 	opacity: 0;
   animation: blink 20s infinite; /* Kürzere Gesamtdauer der Animation */
- animation-delay: 4s; /* Verzögerung beim ersten Start */
+ animation-delay: 2s; /* Verzögerung beim ersten Start */
 }
 
 
