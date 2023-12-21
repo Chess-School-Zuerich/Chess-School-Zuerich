@@ -394,6 +394,25 @@
 
 })(jQuery);
 
+
+const hintStar = document.querySelector('.hint-star');
+
+// Funktion zum Anzeigen des Sternchens
+function showHintStar() {
+    hintStar.style.display = 'block';
+}
+
+// Funktion zum Verbergen des Sternchens
+function hideHintStar() {
+    hintStar.style.display = 'none';
+}
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
