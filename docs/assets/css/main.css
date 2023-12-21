@@ -1718,22 +1718,54 @@ input, select, textarea {
 
 .hint-star {
   position: absolute;
-  top: 40%;  /* Verändern Sie diese Werte nach Bedarf */
-  left: 60%; /* Verändern Sie diese Werte nach Bedarf */
-  width: 30px;  /* Oder die gewünschte Größe */
-  height: 30px; /* Oder die gewünschte Größe */
+  top: 11%;  /* Verändern Sie diese Werte nach Bedarf */
+  left: 83%; /* Verändern Sie diese Werte nach Bedarf */
+  width: 40px;  /* Oder die gewünschte Größe */
+  height: 40px; /* Oder die gewünschte Größe */
   background-image: url('../../star-icon.png'); /* Pfad zum Sternchen-Bild */
   background-size: cover;
   background-repeat: no-repeat;
   transform: translate(-50%, -50%);
-  animation: blink 2s infinite; /* Kürzere Gesamtdauer der Animation */
+  animation: blink 10s infinite; /* Kürzere Gesamtdauer der Animation */
 }
+
 
 @keyframes blink {
-  0%, 100% { opacity: 0; }
-  10%, 90% { opacity: 1; } /* Schnellerer Übergang zur vollen Sichtbarkeit */
+  0%, 39%, 61%, 100% { opacity: 0; }
+  40% { opacity: 0.1; }
+  41% { opacity: 0.12; }
+  42% { opacity: 0.14; }
+  43% { opacity: 0.16; }
+  44% { opacity: 0.18; }
+  45% { opacity: 0.2; }
+  46% { opacity: 0.22; }
+  47% { opacity: 0.26; }
+  48% { opacity: 0.3; }
+  48.25% { opacity: 0.35; }
+  48.5% { opacity: 0.4; }
+  48.75% { opacity: 0.45; }
+  49% { opacity: 0.5; }
+  49.25% { opacity: 0.6; }
+  49.5% { opacity: 0.7; }
+  49.75% { opacity: 0.8; }
+  50% { opacity: 1; }
+  50.25% { opacity: 0.8; }
+  50.5% { opacity: 0.7; }
+  50.75% { opacity: 0.6; }
+  51% { opacity: 0.5; }
+  51.25% { opacity: 0.45; }
+  51.5% { opacity: 0.4; }
+  51.75% { opacity: 0.35; }
+  52% { opacity: 0.3; }
+  53% { opacity: 0.26; }
+  54% { opacity: 0.22; }
+  55% { opacity: 0.2; }
+  56% { opacity: 0.18; }
+  57% { opacity: 0.16; }
+  58% { opacity: 0.14; }
+  59% { opacity: 0.12; }
+  60% { opacity: 0.1; }
 }
-
 
 
 
