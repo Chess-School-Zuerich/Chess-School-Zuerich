@@ -426,14 +426,16 @@ var logo = document.querySelector('.logo');
 var isSpinning = false;
 
 function handleAnimationEnd() {
-    logoContainer.style.transform = 'scale(1)'; // Verkleinerung nach Ende der Drehung
+    logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Verkleinerung
+    logoContainer.style.transform = 'scale(1)'; // Verkleinerung
     logo.classList.remove('spin');
     isSpinning = false;
 }
 
 function toggleSpin() {
     if (!isSpinning) {
-        logoContainer.style.transform = 'scale(1.05)'; // Beginn der Vergrößerung
+        logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Vergrößerung
+        logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
         logo.classList.add('spin');
         isSpinning = true;
         logo.addEventListener('animationend', handleAnimationEnd);
