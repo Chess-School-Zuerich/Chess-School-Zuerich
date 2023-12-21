@@ -1730,6 +1730,7 @@ input, select, textarea {
   background-size: cover;
   background-repeat: no-repeat;
   transform: translate(-50%, -50%) rotate(0deg); /* Startrotation */
+	opacity: 0;
   animation: blink 20s infinite; /* Kürzere Gesamtdauer der Animation */
  animation-delay: 40s; /* Verzögerung beim ersten Start */
 }
