@@ -1726,47 +1726,50 @@ input, select, textarea {
   background-size: cover;
   background-repeat: no-repeat;
   transform: translate(-50%, -50%) rotate(0deg); /* Startrotation */
-  animation: blink 10s infinite; /* Kürzere Gesamtdauer der Animation */
+  animation: blink 20s infinite; /* Kürzere Gesamtdauer der Animation */
+ animation-delay: 40s; /* Verzögerung beim ersten Start */
 }
+
+
 
 @keyframes blink {
-  0%, 39%, 61%, 100% { opacity: 0; transform: rotate(0deg); }
-  40% { opacity: 0.1; transform: rotate(0deg); }
- 41% { opacity: 0.12; }
-  42% { opacity: 0.14; }
-  43% { opacity: 0.16; }
-  44% { opacity: 0.18; }
-  45% { opacity: 0.2; }
-  46% { opacity: 0.22; }
-  47% { opacity: 0.26; }
-  48% { opacity: 0.3; }
-  48.25% { opacity: 0.35; }
-  48.5% { opacity: 0.4; }
-  48.75% { opacity: 0.45; }
-  49% { opacity: 0.5; }
-  49.25% { opacity: 0.6; }
-  49.5% { opacity: 0.7; }
-  49.75% { opacity: 0.8; }
-  45% { transform: rotate(22.5deg); }
-  50% { opacity: 1; transform: rotate(45deg); } /* Stern zeigt diagonal */
-  /* Rückkehr zur ursprünglichen Rotation nach 50% */
-  60% { opacity: 0.1; transform: rotate(0deg); }
-  51% { opacity: 0.5; }
-  51.25% { opacity: 0.45; }
-  51.5% { opacity: 0.4; }
-  51.75% { opacity: 0.35; }
-  52% { opacity: 0.3; }
-  53% { opacity: 0.26; }
-  54% { opacity: 0.22; }
-  55% { opacity: 0.2; }
-  56% { opacity: 0.18; }
-  57% { opacity: 0.16; }
-  58% { opacity: 0.14; }
-  59% { opacity: 0.12; }
-  60% { opacity: 0.1; }
+  0%, 19.5%, 30.5%, 50%, 100% { opacity: 0; transform: rotate(0deg); }
+  20% { opacity: 0.1; transform: rotate(0deg); }
+  21% { opacity: 0.12; }
+  22% { opacity: 0.14; }
+  23% { opacity: 0.16; }
+  24% { opacity: 0.18; }
+  25% { opacity: 0.2; }
+  26% { opacity: 0.22; }
+  27% { opacity: 0.26; }
+  28% { opacity: 0.3; }
+  28.25% { opacity: 0.35; }
+  28.5% { opacity: 0.4; }
+  28.75% { opacity: 0.45; }
+  29% { opacity: 0.5; }
+  29.25% { opacity: 0.6; }
+  29.5% { opacity: 0.7; }
+  29.75% { opacity: 0.8; }
+	 25% { transform: rotate(22.5deg); }
+  30% { opacity: 1; transform: rotate(45deg); } /* Stern zeigt diagonal */
+	 40% { opacity: 0.1; transform: rotate(0deg); 
+  30.25% { opacity: 0.8; }
+  30.5% { opacity: 0.7; }
+  30.75% { opacity: 0.6; }
+  31% { opacity: 0.5; }
+  31.25% { opacity: 0.45; }
+  31.5% { opacity: 0.4; }
+  31.75% { opacity: 0.35; }
+  32% { opacity: 0.3; }
+  33% { opacity: 0.26; }
+  34% { opacity: 0.22; }
+  35% { opacity: 0.2; }
+  36% { opacity: 0.18; }
+  37% { opacity: 0.16; }
+  38% { opacity: 0.14; }
+  39% { opacity: 0.12; }
+  40% { opacity: 0.1; }
 }
-
-
 
 
 
