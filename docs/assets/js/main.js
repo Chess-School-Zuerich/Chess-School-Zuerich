@@ -420,8 +420,8 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'none';
     });
 
- function toggleSpin() {
-    var logoContainer = document.querySelector('.logo-container');
+function toggleSpin() {
+    var logoContainer = document.querySelector('.logo-container'); // Zugriff auf den äußeren Container
     if (!isSpinning) {
         logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung des Containers
         logo.classList.add('spin');
@@ -433,6 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000); // Dauer der Drehung
     }
 }
+
 
 
     // Verzögertes Starten der Drehung des Logos beim ersten Laden der Seite
