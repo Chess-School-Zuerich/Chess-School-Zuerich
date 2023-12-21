@@ -395,7 +395,6 @@
 })(jQuery);
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
@@ -410,16 +409,19 @@ document.addEventListener('DOMContentLoaded', function() {
     function showConfirmBox() {
         setTimeout(function() {
             confirmBox.style.display = 'block';
+            isBoxShown = true;
         }, 3000); // 500 Millisekunden Verzögerung
     }
 
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
         confirmBox.style.display = 'none';
+        isBoxShown = false;
     });
 
     confirmNo.addEventListener('click', function() {
         confirmBox.style.display = 'none';
+        isBoxShown = false;
     });
 
     function handleAnimationEnd() {
@@ -441,21 +443,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Verzögertes Starten der Drehung des Logos beim ersten Laden der Seite
-    setTimeout(function() {
-        toggleSpin();
-    }, 800);
-
     logo.addEventListener('click', function() {
         if (!isSpinning && !isBoxShown) {
             toggleSpin();
-        }
-        clickCount++;
-        if (clickCount === 2 && !isBoxShown) {
-            showConfirmBox();
-            clickCount = 0;
+            clickCount++;
+            if (clickCount === 2) {
+                showConfirmBox();
+                clickCount = 0;
+            }
         }
     });
+
+    // Starte die erste Drehung des Logos beim Laden der Seite
+    setTimeout(toggleSpin, 800);
 });
 
 
