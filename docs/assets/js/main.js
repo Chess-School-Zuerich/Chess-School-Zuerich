@@ -426,16 +426,19 @@ function toggleSpin() {
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
     if (!isSpinning) {
-        logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung des Containers
+        logoContainer.style.transform = 'scale(1.05)'; // Beginn der Vergrößerung
         logo.classList.add('spin');
         isSpinning = true;
-        setTimeout(function() {
-            logoContainer.style.transform = 'scale(1)'; // Verkleinerung des Containers
+        // Event-Listener für das Ende der CSS-Animation
+        logo.addEventListener('animationend', function() {
+            logoContainer.style.transform = 'scale(1)'; // Verkleinerung nach Ende der Drehung
             logo.classList.remove('spin');
             isSpinning = false;
-        }, 3000); // Dauer der Drehung, stellen Sie sicher, dass dies der Dauer der Animation entspricht
+            logo.removeEventListener('animationend', arguments.callee);
+        });
     }
 }
+
 
 
 
