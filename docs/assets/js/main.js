@@ -416,12 +416,10 @@ document.addEventListener('DOMContentLoaded', function() {
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
         confirmBox.style.display = 'none';
-        isBoxShown = false;
     });
 
     confirmNo.addEventListener('click', function() {
         confirmBox.style.display = 'none';
-        isBoxShown = false;
     });
 
     function handleAnimationEnd() {
