@@ -1713,20 +1713,32 @@ input, select, textarea {
 
 
 
-.hint-star {
-    position: absolute;
-    top: -10px; /* Position anpassen */
-    right: -10px; /* Position anpassen */
-    width: 20px; /* Größe des Sternchens */
-    height: 20px; /* Größe des Sternchens */
-    background-color: gold; /* Farbe des Sternchens */
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Stern-Form */
-    animation: blink 1s infinite;
+.logo-container {
+    position: relative;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+.hint-star {
+    position: absolute;
+    top: 0; /* Positionieren Sie das Sternchen nach Ihren Bedürfnissen */
+    right: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0 0 6px 2px white;
+    opacity: 0;
+    animation: twinkling-star 2s infinite;
+}
+
+@keyframes twinkling-star {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
