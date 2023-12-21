@@ -1802,13 +1802,15 @@ input, select, textarea {
 
 
 
-
-
-
 .logo img:hover {
     filter: brightness(90%); /* Leichte Verdunklung */
     transition: filter 0.3s ease; /* Sanfter Übergang für den Effekt */
 }
 
+
+
+.logo img {
+    transition: transform 0.5s ease, filter 0.3s ease; /* Weichere Übergänge für Vergrößerung und Verdunklung */
+}
 
 
