@@ -420,8 +420,11 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'none';
     });
 
+
+	
 function toggleSpin() {
-    var logoContainer = document.querySelector('.logo-container'); // Zugriff auf den äußeren Container
+    var logoContainer = document.querySelector('.logo-container');
+    var logo = document.querySelector('.logo');
     if (!isSpinning) {
         logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung des Containers
         logo.classList.add('spin');
@@ -430,9 +433,10 @@ function toggleSpin() {
             logoContainer.style.transform = 'scale(1)'; // Verkleinerung des Containers
             logo.classList.remove('spin');
             isSpinning = false;
-        }, 3000); // Dauer der Drehung
+        }, 3000); // Dauer der Drehung, stellen Sie sicher, dass dies der Dauer der Animation entspricht
     }
 }
+
 
 
 
