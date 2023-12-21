@@ -1787,30 +1787,14 @@ input, select, textarea {
 
 
 
-/*
-.logo img {
-  max-width: none;
-  width: 50%;}
-*/
-
 .logo img {
     width: 25vw; 
     min-width: 85px; 
     max-width: 250px; 
     height: auto;
-}
-
-
-
-.logo img:hover {
-    filter: brightness(90%); /* Leichte Verdunklung */
-    transition: filter 0.3s ease; /* Sanfter Übergang für den Effekt */
-}
-
-
-
-.logo img {
     transition: transform 1s ease, filter 0.3s ease; /* Weichere Übergänge für Vergrößerung und Verdunklung */
 }
 
-
+.logo img:hover {
+    filter: brightness(90%); /* Leichte Verdunklung */
+}
