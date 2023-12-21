@@ -1868,5 +1868,5 @@ input, select, textarea {
 }
 
 .logo img:hover {
-    filter: brightness(80%); /* Leichte Verdunklung */
+    filter: brightness(70%); /* Leichte Verdunklung */
 }
