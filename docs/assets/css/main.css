@@ -1718,31 +1718,71 @@ input, select, textarea {
 }
 
 .hint-star {
-    position: absolute;
-    top: 0; /* Positionieren Sie das Sternchen nach Ihren Bedürfnissen */
-    right: 0;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: transparent;
-    box-shadow: 
-        0 0 6px 2px white, /* Weißer Kern */
-        0 0 10px 4px rgba(255, 255, 255, 0.6), /* Längere Strahlen */
-        0 0 8px 3px rgba(255, 255, 255, 0.5), /* Mittlere Strahlen */
-        0 0 6px 2px rgba(255, 255, 255, 0.4); /* Kürzere Strahlen */
-    opacity: 0;
-    animation: twinkling-star 2s infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #ffffff;
+  animation: blink 2s infinite;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes twinkling-star {
-    0%, 100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
+.hint-star::before,
+.hint-star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transform-origin: left;
+}
+
+/* Erste Gruppe von Strahlen */
+.hint-star::before {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.hint-star::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Zweite Gruppe von Strahlen */
+.hint-star span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transform-origin: left;
+}
+
+.hint-star span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hint-star span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.hint-star span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.hint-star span:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 
