@@ -397,20 +397,22 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
     var isSpinning = false;
-    var clickCount = 0;
+    var isBoxShown = false;
+
     var confirmBox = document.getElementById('customConfirmBox');
     var confirmYes = document.getElementById('confirmYes');
     var confirmNo = document.getElementById('confirmNo');
+    var clickCount = 0;
 
     function showConfirmBox() {
-        setTimeout(function() { // Verzögertes Anzeigen der Box
+        setTimeout(function() {
             confirmBox.style.display = 'block';
         }, 3000); // 500 Millisekunden Verzögerung
     }
 
-    // Direktes Scrollen zum Anmeldeformular beim Klick auf "Ja"
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
         confirmBox.style.display = 'none';
@@ -420,28 +422,39 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'none';
     });
 
-
-var logoContainer = document.querySelector('.logo-container');
-var logo = document.querySelector('.logo');
-var isSpinning = false;
-
-function handleAnimationEnd() {
-    logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Verkleinerung
-    logoContainer.style.transform = 'scale(1)'; // Verkleinerung
-    logo.classList.remove('spin');
-    isSpinning = false;
-}
-
-function toggleSpin() {
-    if (!isSpinning) {
-        logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Vergrößerung
-        logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
-        logo.classList.add('spin');
-        isSpinning = true;
-        logo.addEventListener('animationend', handleAnimationEnd);
+    function handleAnimationEnd() {
+        logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Verkleinerung
+        logoContainer.style.transform = 'scale(1)'; // Verkleinerung
+        logo.classList.remove('spin');
+        isSpinning = false;
+        logo.removeEventListener('animationend', handleAnimationEnd);
     }
-}
 
+    function toggleSpin() {
+        if (!isSpinning) {
+            logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Vergrößerung
+            logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
+            logo.classList.add('spin');
+            isSpinning = true;
+            isBoxShown = true;
+            logo.addEventListener('animationend', handleAnimationEnd);
+        }
+    }
+
+    setTimeout(function() {
+        toggleSpin();
+        logo.addEventListener('click', function() {
+            if (!isSpinning && !isBoxShown) {
+                toggleSpin();
+            }
+            clickCount++;
+            if (clickCount === 2 && !isBoxShown) {
+                showConfirmBox();
+                clickCount = 0;
+            }
+        });
+    }, 800);
+});
 
 
 
