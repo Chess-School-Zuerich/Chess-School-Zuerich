@@ -1772,10 +1772,13 @@ input, select, textarea {
 }
 
 
-
+.logo-container {
+    transition: transform 1s ease; /* Weicher Übergang für Vergrößerung/Verkleinerung */
+    display: inline-block; /* oder flex, je nach Bedarf */
+}
 
 .logo.spin img {
-    animation: spinLogo 3s linear 1; /* 1 Iteration statt infinite */
+    animation: spinLogo 3s linear 1; /* Drehanimation nur für das Bild */
 }
 
 
