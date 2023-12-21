@@ -427,6 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
         logoContainer.style.transform = 'scale(1)'; // Verkleinerung
         logo.classList.remove('spin');
         isSpinning = false;
+        isBoxShown = false;
         logo.removeEventListener('animationend', handleAnimationEnd);
     }
 
@@ -436,46 +437,26 @@ document.addEventListener('DOMContentLoaded', function() {
             logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
             logo.classList.add('spin');
             isSpinning = true;
-            isBoxShown = true;
             logo.addEventListener('animationend', handleAnimationEnd);
         }
     }
 
-    setTimeout(function() {
-        toggleSpin();
-        logo.addEventListener('click', function() {
-            if (!isSpinning && !isBoxShown) {
-                toggleSpin();
-            }
-            clickCount++;
-            if (clickCount === 2 && !isBoxShown) {
-                showConfirmBox();
-                clickCount = 0;
-            }
-        });
-    }, 800);
-});
-
-
-
-
-
     // Verzögertes Starten der Drehung des Logos beim ersten Laden der Seite
     setTimeout(function() {
         toggleSpin();
-        logo.addEventListener('click', toggleSpin); // Fügt den Event-Listener hinzu, nachdem die erste Drehung beendet ist
-    }, 800); // Verzögert den Start der Drehung um 1 Sekunde
+    }, 800);
 
-    // Event-Listener für das Logo, um die Anzahl der Klicks zu zählen
     logo.addEventListener('click', function() {
+        if (!isSpinning && !isBoxShown) {
+            toggleSpin();
+        }
         clickCount++;
-        if (clickCount === 2) {
+        if (clickCount === 2 && !isBoxShown) {
             showConfirmBox();
-            clickCount = 0; // Setzt den Zähler zurück
+            clickCount = 0;
         }
     });
 });
-
 
 
 
