@@ -422,6 +422,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	
+function handleAnimationEnd() {
+    logoContainer.style.transform = 'scale(1)'; // Verkleinerung nach Ende der Drehung
+    logo.classList.remove('spin');
+    isSpinning = false;
+    logo.removeEventListener('animationend', handleAnimationEnd);
+}
+
 function toggleSpin() {
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo');
@@ -429,13 +436,7 @@ function toggleSpin() {
         logoContainer.style.transform = 'scale(1.05)'; // Beginn der Vergrößerung
         logo.classList.add('spin');
         isSpinning = true;
-        // Event-Listener für das Ende der CSS-Animation
-        logo.addEventListener('animationend', function() {
-            logoContainer.style.transform = 'scale(1)'; // Verkleinerung nach Ende der Drehung
-            logo.classList.remove('spin');
-            isSpinning = false;
-            logo.removeEventListener('animationend', arguments.callee);
-        });
+        logo.addEventListener('animationend', handleAnimationEnd);
     }
 }
 
