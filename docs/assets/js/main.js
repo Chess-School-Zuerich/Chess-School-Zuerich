@@ -431,15 +431,18 @@ document.addEventListener('DOMContentLoaded', function() {
         logo.removeEventListener('animationend', handleAnimationEnd);
     }
 
-    function toggleSpin() {
-        if (!isSpinning) {
-            logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Vergrößerung
-            logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
-            logo.classList.add('spin');
-            isSpinning = true;
-            logo.addEventListener('animationend', handleAnimationEnd);
-        }
+function toggleSpin() {
+    // Entfernt den Event Listener, bevor ein neuer hinzugefügt wird
+    logo.removeEventListener('animationend', handleAnimationEnd);
+
+    if (!isSpinning) {
+        logoContainer.style.transition = 'transform 1s ease'; // Verzögerung für die Vergrößerung
+        logoContainer.style.transform = 'scale(1.05)'; // Vergrößerung
+        logo.classList.add('spin');
+        isSpinning = true;
+        logo.addEventListener('animationend', handleAnimationEnd);
     }
+}
 
     setTimeout(function() {
         toggleSpin();
