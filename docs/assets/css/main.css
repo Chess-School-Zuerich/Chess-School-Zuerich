@@ -1917,6 +1917,7 @@ input, select, textarea {
 
 .logo.fall {
     animation: fallAndFlip 2s ease-in forwards;
+	 box-shadow: none;
 }
 
 
