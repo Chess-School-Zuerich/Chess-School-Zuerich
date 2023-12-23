@@ -463,6 +463,9 @@ function toggleSpin() {
     }
 }
 
+
+
+	
     setTimeout(function() {
         toggleSpin();
     }, 800);
@@ -529,5 +532,7 @@ logo.addEventListener('click', function() {
             showConfirmBox();
         }
     }
+}
+		      
 });
 
