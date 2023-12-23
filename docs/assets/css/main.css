@@ -1858,7 +1858,6 @@ input, select, textarea {
     display: inline-block; /* oder flex, je nach Bedarf */
 }
 
-
 @keyframes spinAndShadow {
     0%, 100% {
         transform: rotateY(360deg); /* Vollständige Drehung zurück zum Ausgangspunkt */
