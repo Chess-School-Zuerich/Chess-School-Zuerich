@@ -1862,27 +1862,26 @@ input, select, textarea {
 
 @keyframes spinAndShadow {
     0% {
-        transform: rotateY(0deg);
-        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten am Anfang */
+        transform: rotateY(0deg); /* Startpunkt der Drehung */
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Anfangsschatten */
     }
     25% {
-        transform: rotateY(90deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten bei 90 Grad Drehung */
+        transform: rotateY(90deg); /* Viertel Drehung */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
     }
     50% {
-        transform: rotateY(180deg);
-        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten bei 180 Grad Drehung */
+        transform: rotateY(180deg); /* Halbe Drehung */
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.6);
     }
     75% {
-        transform: rotateY(270deg);
-        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten bei 270 Grad Drehung */
+        transform: rotateY(270deg); /* Dreiviertel Drehung */
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.6);
     }
     100% {
-        transform: rotateY(360deg);
-        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten am Ende */
+        transform: rotateY(360deg); /* Vollständige Drehung zurück zum Startpunkt */
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Endschatten identisch zum Anfangsschatten */
     }
 }
-
 
 
 
