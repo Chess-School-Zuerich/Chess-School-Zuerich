@@ -1874,10 +1874,10 @@ input, select, textarea {
 
 
 
-
 .logo.spin img {
-    animation: spinAndShadow 3s linear infinite;
+    animation: spinAndShadow 3s linear;
 }
+
 
 
 
