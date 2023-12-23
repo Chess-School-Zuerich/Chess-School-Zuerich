@@ -480,3 +480,14 @@ function toggleSpin() {
 
 
 
+
+
+
+function updateShadow(angle) {
+    var xOffset = Math.cos(angle) * desiredShadowLength;
+    var shadowStyle = xOffset + 'px 0px ' + shadowBlur + 'px rgba(0, 0, 0, 0.5)';
+    logo.style.boxShadow = shadowStyle;
+}
+
+
+
