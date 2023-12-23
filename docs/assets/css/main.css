@@ -1890,9 +1890,8 @@ input, select, textarea {
     min-width: 85px; 
     max-width: 250px; 
     height: auto;
-    transition: transform 1s ease, filter 0.3s ease; /* Weichere Übergänge für Vergrößerung und Verdunklung */
-
-   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Weicher, gleichmäßiger Schatten */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Erhöhte Unschärfe und dunklere Farbe */
+    transition: transform 1s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Hinzufügen einer Transition für den Schatten */
     border-radius: 50%; /* Macht das Bild rund, wenn es nicht schon rund ist */
 }
 
