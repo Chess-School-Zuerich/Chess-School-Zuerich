@@ -482,26 +482,3 @@ function toggleSpin() {
 
 
 
-
-function updateShadow(angle) {
-    var shadowIntensity = (Math.cos(angle) + 1) / 2; // Normalisieren Sie den Wert zwischen 0 und 1
-    var shadowOpacity = 0.3 + (shadowIntensity * 0.3); // Zwischen 0.3 und 0.6
-    var shadowStyle = '0px 0px 15px rgba(0, 0, 0, ' + shadowOpacity + ')';
-    logo.style.boxShadow = shadowStyle;
-}
-
-
-
-
-
-
-
-
-function animateLogo() {
-    var angle = /* Berechnen Sie den aktuellen Drehwinkel des Logos */;
-    updateShadow(angle);
-    requestAnimationFrame(animateLogo);
-}
-
-animateLogo();
-
