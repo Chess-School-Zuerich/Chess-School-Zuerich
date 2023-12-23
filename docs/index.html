@@ -39,12 +39,22 @@
 						
 
 <!-- Buttons für die Box wenn man 4mal aufs Logo klickt -->
-				
 <div id="customConfirmBox" style="display: none;">
     <h2>Hey! Bist du hier um mit unserem Logo zu spielen oder um dich für einen Schachkurs anzumelden?</h2>
-    <button id="confirmYes">Okay... Zeig mal her das Formular!</button>
-    <button id="confirmNo">Lass mich Spielen!</button>
+    <button id="confirmYes" class="confirmButton">Okay... Zeig mal her das Formular!</button>
+    <button id="confirmNo" class="confirmButton">Lass mich Spielen!</button>
 </div>
+
+<!-- JavaScript-Code, um die Buttons in der mobilen Version kleiner zu machen -->
+<script>
+if (window.innerWidth <= 768) { // Du kannst die maximale Breite anpassen
+    var buttons = document.querySelectorAll('.confirmButton');
+    buttons.forEach(function(button) {
+        button.style.fontSize = '0.8em'; // Schriftgröße für mobile Version
+        button.style.padding = '5px 10px'; // Padding für mobile Version
+    });
+}
+</script>
 
 						
 
