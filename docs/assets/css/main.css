@@ -1840,10 +1840,7 @@ input, select, textarea {
         font-size: 1.2em; /* Reduziere die Schriftgröße für Mobilgeräte */
     }
 
-    #customConfirmBox button {
-        font-size: 0.8em !important; /* !important, um sicherzustellen, dass die Schriftgröße überschrieben wird */
-        padding: 5px 10px !important; /* !important, um sicherzustellen, dass das Padding überschrieben wird */
-    }
+
 }
 
 
