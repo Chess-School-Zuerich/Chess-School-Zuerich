@@ -531,7 +531,6 @@ logo.addEventListener('click', function() {
         if (clickCount === 2 && !confirmBoxShown) {
             showConfirmBox();
         }
-    }
 }
 		      
 });
