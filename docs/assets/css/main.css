@@ -1830,6 +1830,21 @@ input, select, textarea {
     background-color: #d32f2f;
 }
 
+/* Media Query für Mobilgeräte (maximale Bildschirmbreite von z.B. 768px) */
+@media (max-width: 768px) {
+    #customConfirmBox {
+        max-width: 90%; /* Reduziere die maximale Breite für Mobilgeräte */
+    }
+
+    #customConfirmBox h2 {
+        font-size: 1.2em; /* Reduziere die Schriftgröße für Mobilgeräte */
+    }
+
+    #customConfirmBox button {
+        font-size: 0.8em; /* Reduziere die Schriftgröße der Buttons für Mobilgeräte */
+        padding: 8px 16px; /* Reduziere das Padding der Buttons für Mobilgeräte */
+    }
+}
 
 
 
