@@ -485,6 +485,8 @@ function toggleSpin() {
 */
 
 
+
+	/*
   logo.addEventListener('click', function() {
         clickCount++;
         
@@ -502,5 +504,32 @@ function toggleSpin() {
     });
 });
 
+*/
+
+
+
+
+	var isAnimationInProgress = false;
+
+logo.addEventListener('click', function() {
+    if (!isAnimationInProgress) {
+        toggleSpin();
+        clickCount++;
+
+        if (clickCount === 5) {
+            isAnimationInProgress = true; // Animation startet, Klicks während der Animation werden ignoriert
+            logo.classList.add('fall');
+
+            // Nach Abschluss der Animation den Event-Handler wieder aktivieren
+            setTimeout(function() {
+                isAnimationInProgress = false;
+            }, 2000); // Hier 2000 steht für die Dauer der Fall-Animation in Millisekunden
+        }
+
+        if (clickCount === 2 && !confirmBoxShown) {
+            showConfirmBox();
+        }
+    }
+});
 
 
