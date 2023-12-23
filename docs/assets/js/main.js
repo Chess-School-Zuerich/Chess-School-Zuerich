@@ -467,6 +467,10 @@ function toggleSpin() {
         toggleSpin();
     }, 800);
 
+
+
+/*
+	
     logo.addEventListener('click', function() {
         if (!isSpinning) {
             toggleSpin();
@@ -478,7 +482,25 @@ function toggleSpin() {
     });
 });
 
+*/
 
+
+  logo.addEventListener('click', function() {
+        clickCount++;
+        
+        if (!isSpinning) {
+            toggleSpin();
+        }
+
+        if (clickCount === 5) {
+            logo.classList.add('fall'); // Fügt die Klasse hinzu, um die Fallanimation zu starten
+        }
+
+        if (clickCount === 2 && !confirmBoxShown) {
+            showConfirmBox();
+        }
+    });
+});
 
 
 
