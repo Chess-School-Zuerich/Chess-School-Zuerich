@@ -1864,13 +1864,26 @@ input, select, textarea {
 @keyframes spinAndShadow {
     0% {
         transform: rotateY(0deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); /* Schatten startet auf der rechten Seite */
+    }
+    25% {
+        transform: rotateY(90deg);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Schatten verlagert sich und wird weniger sichtbar */
+    }
+    50% {
+        transform: rotateY(180deg);
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.5); /* Schatten auf der linken Seite */
+    }
+    75% {
+        transform: rotateY(270deg);
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.3); /* Schatten verschiebt sich erneut */
     }
     100% {
         transform: rotateY(360deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); /* Schatten kehrt zur Ausgangsposition zurück */
     }
 }
+
 
 
 
