@@ -1897,6 +1897,35 @@ input, select, textarea {
 
 
 
+@keyframes fallAndFlip {
+    0% {
+        transform: rotateX(0deg) translateY(0) translateZ(0);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: rotateX(30deg) translateY(-50px) translateZ(-30px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+        opacity: 0.7;
+    }
+    100% {
+        transform: rotateX(90deg) translateY(-200px) translateZ(-100px);
+        box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.8);
+        opacity: 0;
+    }
+}
+
+.logo.fall {
+    animation: fallAndFlip 2s ease-in forwards;
+}
+
+
+
+
+
+
+
+
 
 .logo img:last-child {
     z-index: 100000;
@@ -1919,3 +1948,5 @@ input, select, textarea {
 .logo img:hover {
     filter: brightness(70%); /* Leichte Verdunklung */
 }
+
+
