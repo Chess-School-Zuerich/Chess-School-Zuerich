@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 confirmBox.style.display = 'block';
                 confirmBoxShown = true; // Verhindert erneute Anzeige der Bestätigungsbox
-            }, 3000); // 500 Millisekunden Verzögerung
+            }, 3500); // 500 Millisekunden Verzögerung
         }
     }
 
