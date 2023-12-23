@@ -1877,6 +1877,7 @@ input, select, textarea {
     max-width: 250px; 
     height: auto;
     transition: transform 1s ease, filter 0.3s ease; /* Weichere Übergänge für Vergrößerung und Verdunklung */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ein grundlegender Schatten */
 }
 
 .logo img:hover {
