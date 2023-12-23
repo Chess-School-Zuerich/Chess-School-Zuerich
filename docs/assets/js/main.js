@@ -412,7 +412,7 @@ function hideHintStar() {
 
 
 
-
+/*
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -472,7 +472,7 @@ function toggleSpin() {
         toggleSpin();
     }, 800);
 
-
+*/
 
 /*
 	
@@ -511,7 +511,7 @@ function toggleSpin() {
 
 */
 
-
+/*
 
 	var isAnimationInProgress = false;
 
@@ -537,4 +537,86 @@ logo.addEventListener('click', function() {
 		      
 });
 
+});
+*/
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var logoContainer = document.querySelector('.logo-container');
+    var logo = document.querySelector('.logo');
+    var isSpinning = false;
+    var confirmBoxShown = false;
+    var animationInProgress = false; // Neue Variable, um die Animation zu verfolgen
+
+    var confirmBox = document.getElementById('customConfirmBox');
+    var confirmYes = document.getElementById('confirmYes');
+    var confirmNo = document.getElementById('confirmNo');
+    var clickCount = 0;
+
+    function showConfirmBox() {
+        if (!confirmBoxShown) {
+            setTimeout(function() {
+                confirmBox.style.display = 'block';
+                confirmBoxShown = true;
+            }, 3500);
+        }
+    }
+
+    confirmYes.addEventListener('click', function() {
+        window.location.href = '#anmelden';
+        confirmBox.style.display = 'none';
+    });
+
+    confirmNo.addEventListener('click', function() {
+        confirmBox.style.display = 'none';
+    });
+
+    function handleAnimationEnd() {
+        logoContainer.style.transition = 'transform 1s ease';
+        logoContainer.style.transform = 'scale(1)';
+        logo.classList.remove('spin');
+        isSpinning = false;
+        logo.removeEventListener('animationend', handleAnimationEnd);
+        animationInProgress = false; // Animation ist beendet
+    }
+
+    function toggleSpin() {
+        logo.removeEventListener('animationend', handleAnimationEnd);
+
+        if (!isSpinning) {
+            logoContainer.style.transition = 'transform 1s ease';
+            logoContainer.style.transform = 'scale(1.05)';
+            logo.classList.add('spin');
+            isSpinning = true;
+            logo.addEventListener('animationend', handleAnimationEnd);
+            animationInProgress = true; // Animation hat begonnen
+        }
+    }
+
+    setTimeout(function() {
+        toggleSpin();
+    }, 800);
+
+    logo.addEventListener('click', function() {
+        if (!animationInProgress) { // Nur wenn keine Animation aktiv ist
+            toggleSpin();
+            clickCount++;
+
+            if (clickCount === 5) {
+                animationInProgress = true; // Animation startet
+                logo.classList.add('fall');
+
+                setTimeout(function() {
+                    animationInProgress = false; // Animation ist beendet
+                }, 2000);
+            }
+
+            if (clickCount === 2 && !confirmBoxShown) {
+                showConfirmBox();
+            }
+        }
+    });
 });
