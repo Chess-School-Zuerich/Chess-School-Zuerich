@@ -1860,23 +1860,22 @@ input, select, textarea {
 
 
 
-
 @keyframes spinAndShadow {
     0%, 100% {
         transform: rotateY(0deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Ursprüngliche Schatteneinstellung */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
     }
     25% {
         transform: rotateY(90deg);
-        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); /* Angepasster Schatten */
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5);
     }
     50% {
         transform: rotateY(180deg);
-        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.5); /* Angepasster Schatten */
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.5);
     }
     75% {
         transform: rotateY(270deg);
-        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.5); /* Angepasster Schatten */
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.5);
     }
 }
 
