@@ -491,3 +491,15 @@ function updateShadow(angle) {
 
 
 
+
+
+
+
+function animateLogo() {
+    var angle = /* Berechnen Sie den aktuellen Drehwinkel des Logos */;
+    updateShadow(angle);
+    requestAnimationFrame(animateLogo);
+}
+
+animateLogo();
+
