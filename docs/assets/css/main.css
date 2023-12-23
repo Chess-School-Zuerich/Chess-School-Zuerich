@@ -1860,25 +1860,29 @@ input, select, textarea {
 
 
 
-
 @keyframes spinAndShadow {
-    0%, 100% {
-        transform: rotateY(360deg); /* Ende der Drehung, zurück zum Anfangspunkt */
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6); /* Konsistenter Schatten am Anfang und Ende */
+    0% {
+        transform: rotateY(0deg);
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten am Anfang */
     }
     25% {
         transform: rotateY(90deg);
-        box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten bei 90 Grad Drehung */
     }
     50% {
         transform: rotateY(180deg);
-        box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.6);
+        box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten bei 180 Grad Drehung */
     }
     75% {
         transform: rotateY(270deg);
-        box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.5); /* Stärkerer Schatten bei 270 Grad Drehung */
+    }
+    100% {
+        transform: rotateY(360deg);
+        box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.6); /* Stärkerer Schatten am Ende */
     }
 }
+
 
 
 
