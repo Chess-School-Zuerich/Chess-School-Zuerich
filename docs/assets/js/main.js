@@ -508,7 +508,6 @@ function toggleSpin() {
 
 
 
-
 	var isAnimationInProgress = false;
 
 logo.addEventListener('click', function() {
@@ -531,5 +530,4 @@ logo.addEventListener('click', function() {
         }
     }
 });
-
 
