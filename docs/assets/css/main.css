@@ -1929,7 +1929,7 @@ padding: 20px; /* oder ein anderer passender Wert */
 
 
 .logo img:last-child {
-    z-index: 100000;
+    z-index: 1;
     display: block;
 }
 
