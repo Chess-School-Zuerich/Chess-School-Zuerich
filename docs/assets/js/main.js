@@ -453,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
    function toggleSpin() {
+	   console.log("Toggle Spin aufgerufen");
     animationInProgress = true; // Markiere, dass eine Animation läuft
     logo.classList.remove('spinAndShadow'); // Entfernen der Klasse, um die Animation zurückzusetzen
     void logo.offsetWidth; // Trigger eines reflow, um die Animation zurückzusetzen
