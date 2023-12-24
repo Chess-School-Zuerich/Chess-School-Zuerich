@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleAnimationEnd() {
         logoContainer.style.transition = 'transform 1s ease';
         logoContainer.style.transform = 'scale(1)';
-        logo.classList.remove('spin');
+        logo.classList.remove('spinAndShadow');
         isSpinning = false;
         logo.removeEventListener('animationend', handleAnimationEnd);
         animationInProgress = false; // Animation ist beendet
