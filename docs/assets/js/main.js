@@ -469,6 +469,9 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleSpin();
     }, 800);
 
+/*
+
+	
     logo.addEventListener('click', function() {
         if (!animationInProgress) { // Nur wenn keine Animation aktiv ist
             toggleSpin();
@@ -488,4 +491,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+});
+
+*/
+
+
+
+	logo.addEventListener('click', function() {
+    if (!animationInProgress) {
+        toggleSpin();
+        clickCount++;
+
+        if (clickCount === 5) {
+            // Warten auf das Ende der aktuellen Spin-Animation
+            logo.addEventListener('animationend', function() {
+                logo.classList.add('fall'); // Starten der Fall-Animation
+                animationInProgress = true;
+            }, { once: true }); // Event-Listener nach Ausführung entfernen
+        }
+
+        if (clickCount === 2 && !confirmBoxShown) {
+            showConfirmBox();
+        }
+    }
+});
 });
