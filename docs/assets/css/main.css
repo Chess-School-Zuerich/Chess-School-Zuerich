@@ -1856,7 +1856,7 @@ input, select, textarea {
 }
 
 .logo.spin {
-    animation: spin 3s ease-in-out;
+    animation: spin 2s ease-in-out;
 }
 
 
