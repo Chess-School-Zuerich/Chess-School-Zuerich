@@ -1856,7 +1856,7 @@ input, select, textarea {
 }
 
 .logo.spin {
-    animation: spin 1s ease-in-out;
+    animation: spin 3s ease-in-out;
 }
 
 
@@ -1917,17 +1917,18 @@ padding: 20px; /* oder ein anderer passender Wert */
         transform: rotateX(0deg) translateY(0);
     }
     80% {
-        transform: rotateX(160deg) translateY(60vh); /* Beginn der seitlichen Drehung */
+        transform: rotateX(160deg) translateY(60vh); /* Richtige Richtung für das Fallen */
     }
     100% {
-        transform: rotateX(180deg) rotateY(5deg) translateY(100vh);
+        transform: rotateX(180deg) rotateY(5deg) translateY(100vh); /* Richtige Richtung für das Fallen */
     }
 }
 
 .logo.fall {
-    animation: fallAndFlip 5s ease-in forwards 3s; /* 1s Verzögerung nach Spin */
+    animation: fallAndFlip 5s ease-in forwards;
     z-index: 1;
 }
+
 
 
 
