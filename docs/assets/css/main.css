@@ -1938,16 +1938,15 @@ padding: 20px; /* oder ein anderer passender Wert */
 }
 
 
-
 .logo img {
     width: 25vw; 
     min-width: 85px; 
     max-width: 250px; 
     height: auto;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Erhöhte Unschärfe und dunklere Farbe */
-    transition: transform 1s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Hinzufügen einer Transition für den Schatten */
-    border-radius: 50%; /* Macht das Bild rund, wenn es nicht schon rund ist */
+    border-radius: 50%;
+    transition: filter 0.3s ease; /* Entfernen von box-shadow aus der Transition */
 }
+
 
 
 .logo img:hover {
