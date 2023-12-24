@@ -454,16 +454,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
    function toggleSpin() {
     animationInProgress = true; // Markiere, dass eine Animation läuft
-    logo.classList.remove('spin'); // Entfernen der Klasse, um die Animation zurückzusetzen
+    logo.classList.remove('spinAndShadow'); // Entfernen der Klasse, um die Animation zurückzusetzen
     void logo.offsetWidth; // Trigger eines reflow, um die Animation zurückzusetzen
-    logo.classList.add('spin'); // Hinzufügen der Klasse, um die Animation zu starten
+    logo.classList.add('spinAndShadow'); // Hinzufügen der Klasse, um die Animation zu starten
 
 
 	   
         if (!isSpinning) {
             logoContainer.style.transition = 'transform 1s ease';
             logoContainer.style.transform = 'scale(1.05)';
-            logo.classList.add('spin');
+            logo.classList.add('spinAndShadow');
             isSpinning = true;
             logo.addEventListener('animationend', handleAnimationEnd);
             animationInProgress = true; // Animation hat begonnen
