@@ -1897,10 +1897,6 @@ padding: 20px; /* oder ein anderer passender Wert */
     border-radius: 50%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
     overflow: hidden;
-    position: absolute; /* Stellt sicher, dass es richtig positioniert ist */
-    top: 0;
-    left: 0;
-    z-index: 1001; /* Höher als der `z-index` des #customConfirmBox */
 }
 
 
