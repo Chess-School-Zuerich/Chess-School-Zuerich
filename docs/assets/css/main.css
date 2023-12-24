@@ -1885,9 +1885,6 @@ padding: 20px; /* oder ein anderer passender Wert */
 
 
 
-
-
-
 .logo.spinAndShadow {
     animation: spinAndShadow 3s linear;
 }
