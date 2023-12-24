@@ -1905,19 +1905,20 @@ padding: 20px; /* oder ein anderer passender Wert */
         opacity: 1;
     }
     30% {
-        transform: rotateX(90deg) rotateY(0deg) translateY(-20px) translateZ(-10px);
+        transform: rotateX(90deg) rotateY(0deg) translateY(20px) translateZ(-10px);
         opacity: 0.9;
     }
     100% {
-        transform: rotateX(0deg) rotateY(0deg) translateY(-100vh) translateZ(0px);
+        transform: rotateX(0deg) rotateY(0deg) translateY(100vh) translateZ(0px);
         opacity: 0;
     }
 }
 
 .logo.fall {
-    animation: fallAndFlip 3s ease-in forwards;
-    z-index: 1; /* Stellen Sie sicher, dass der z-index korrekt eingestellt ist */
+    animation: fallAndFlip 5s ease-in forwards;
+    z-index: 1;
 }
+
 
 
 
