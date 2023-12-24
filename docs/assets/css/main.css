@@ -1911,15 +1911,13 @@ padding: 20px; /* oder ein anderer passender Wert */
 
 
 
-
 @keyframes fallAndFlip {
     0% {
-        transform: rotateX(0deg) translateY(0);
+        transform: translateY(0);
         opacity: 1;
     }
     100% {
-        /* Vermeiden Sie, dass das Logo sich vollständig umdreht */
-        transform: rotateX(160deg) translateY(100vh);
+        transform: translateY(100vh); /* Bewegt das Logo nach unten */
         opacity: 0;
     }
 }
@@ -1927,7 +1925,6 @@ padding: 20px; /* oder ein anderer passender Wert */
 .logo.fall {
     animation: fallAndFlip 5s ease-in forwards;
 }
-
 
 
 
