@@ -1856,7 +1856,7 @@ input, select, textarea {
 .logo-container {
     transition: transform 1s ease; /* Weicher Übergang für Vergrößerung/Verkleinerung */
     display: inline-block; /* oder flex, je nach Bedarf */
-
+padding: 20px; /* oder ein anderer passender Wert */
 	 overflow: hidden;
 }
 
