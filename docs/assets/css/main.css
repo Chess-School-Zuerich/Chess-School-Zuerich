@@ -1901,22 +1901,22 @@ padding: 20px; /* oder ein anderer passender Wert */
 
 @keyframes fallAndFlip {
     0% {
-        transform: rotateX(0deg) translateY(0) translateZ(0);
+        transform: rotateX(0deg) rotateY(0deg) translateY(0);
         opacity: 1;
     }
-    50% {
-        transform: rotateX(140deg) rotateY(10deg) translateY(-50px) translateZ(-30px);
-        opacity: 0.7;
+    30% {
+        transform: rotateX(90deg) rotateY(0deg) translateY(-20px) translateZ(-10px);
+        opacity: 0.9;
     }
     100% {
-        transform: rotateX(160deg) rotateY(10deg) translateY(-500px) translateZ(-300px);
+        transform: rotateX(0deg) rotateY(0deg) translateY(-100vh) translateZ(0px);
         opacity: 0;
     }
 }
 
 .logo.fall {
-    animation: fallAndFlip 3s ease-in forwards; /* Erhöhte Dauer */
-    z-index: 1; /* Niedrigerer z-index für Hintergrundpositionierung */
+    animation: fallAndFlip 3s ease-in forwards;
+    z-index: 1; /* Stellen Sie sicher, dass der z-index korrekt eingestellt ist */
 }
 
 
