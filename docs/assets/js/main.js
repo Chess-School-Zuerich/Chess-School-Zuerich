@@ -498,21 +498,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	logo.addEventListener('click', function() {
-    if (!animationInProgress) {
-        toggleSpin();
-        clickCount++;
+    if (animationInProgress) {
+        return; // Ignoriere Klicks, wenn eine Animation läuft
+    }
 
-        if (clickCount === 5) {
-            // Warten auf das Ende der aktuellen Spin-Animation
-            logo.addEventListener('animationend', function() {
+    toggleSpin(); // Spin-Animation starten
+    animationInProgress = true; // Markiere, dass eine Animation läuft
+
+    logo.addEventListener('animationend', function() {
+        // Warte eine zusätzliche Zeit, bevor die nächste Aktion ausgeführt wird
+        setTimeout(() => {
+            animationInProgress = false; // Markiere, dass die Animation beendet ist
+
+            if (clickCount === 5) {
                 logo.classList.add('fall'); // Starten der Fall-Animation
                 animationInProgress = true;
-            }, { once: true }); // Event-Listener nach Ausführung entfernen
-        }
+            }
 
-        if (clickCount === 2 && !confirmBoxShown) {
-            showConfirmBox();
-        }
-    }
+            if (clickCount === 2 && !confirmBoxShown) {
+                showConfirmBox();
+            }
+        }, 500); // Verzögerung von 500 Millisekunden
+
+    }, { once: true });
+
+    clickCount++; // Zähle Klick nur, wenn keine Animation läuft
 });
 });
