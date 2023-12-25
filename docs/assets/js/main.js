@@ -471,7 +471,8 @@ logo.addEventListener('animationend', function() {
 
 	
     // Event Listener für Logo-Klick
-    logo.addEventListener('click', function() {
+    logo.addEventListener('click', function(event) {
+	    event.stopPropagation();
         if (!animationInProgress) {
             toggleSpin();
             clickCount++;
