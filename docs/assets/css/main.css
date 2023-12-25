@@ -1875,15 +1875,15 @@ input, select, textarea {
 
 
 
-/* Animation für das Drehen des Logos */
 @keyframes spinAndShadow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
 }
 
 .logo.spinAndShadow {
-    animation: spinAndShadow 3s linear infinite;
+    animation: spinAndShadow 3s linear 1; /* Läuft nur einmal */
 }
+
 
 /* Schatten-Animation */
 
