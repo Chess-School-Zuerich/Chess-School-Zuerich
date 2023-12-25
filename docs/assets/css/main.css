@@ -1873,18 +1873,26 @@ input, select, textarea {
     filter: brightness(70%);
 }
 
+/* Schatten-Animation */
+@keyframes shadowSpin {
+  0%, 50%, 100% {
+    transform: scale(1); /* Normalgröße bei Start, Mitte und Ende */
+  }
+  25%, 75% {
+    transform: scale(0.5); /* Verkleinert, wenn Logo seitlich steht */
+  }
+}
 
+/* Stil für das Schattenelement */
 .logo-shadow {
-    width: 250px; /* Gleiche Breite wie das Logo */
-    height: 250px; /* Gleiche Höhe wie das Logo */
-    background: rgba(0, 0, 0, 0.5); /* Schattenfarbe, anpassen nach Bedarf */
-    position: absolute; /* Gleiche Positionierung wie das Logo */
-    top: 0;
-    left: 0;
-    border-radius: 50%; /* Falls das Logo rund ist */
-    opacity: 0; /* Anfangs unsichtbar */
-    transition: transform 0.3s; /* Sanfter Übergang der Transformation */
-    z-index: -1; /* Stellt sicher, dass der Schatten hinter dem Logo ist */
+  width: 100%; /* Anpassen an Logo-Größe */
+  height: 10px; /* Anpassen nach Bedarf */
+  background: rgba(0, 0, 0, 0.5); /* Schattenfarbe */
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px; /* Positionierung unter dem Logo */
+  z-index: -1;
+  animation: shadowSpin 3s linear infinite;
 }
 
 
