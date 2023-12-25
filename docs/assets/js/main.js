@@ -407,13 +407,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var clickCount = 0;
     var hintStar = document.querySelector('.hint-star');
 
-/*
+
 
     // Bestätigungsdialog-Elemente und -Logik
     var confirmBox = document.getElementById('customConfirmBox');
     var confirmYes = document.getElementById('confirmYes');
     var confirmNo = document.getElementById('confirmNo');
-
+/*
     // Event Listener für den Bestätigungsdialog
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
