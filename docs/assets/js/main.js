@@ -531,3 +531,48 @@ document.addEventListener('DOMContentLoaded', function() {
     clickCount++; // Zähle Klick nur, wenn keine Animation läuft
 });
 });
+
+
+
+// JavaScript-Code für die dynamische Schattenanpassung
+document.addEventListener('DOMContentLoaded', function() {
+    var logo = document.querySelector('.logo'); // Auswahl des Logo-Elements
+    var shadow = document.querySelector('.logo-shadow'); // Auswahl des Schatten-Elements
+
+    // Funktion zur Anpassung der Schattengröße
+    function adjustShadowSize() {
+        var rotation = getCurrentRotation(logo); // Aktuellen Rotationswinkel des Logos ermitteln
+        var scale = calculateShadowScale(rotation); // Skalierungsfaktor für den Schatten basierend auf dem Rotationswinkel berechnen
+        shadow.style.transform = 'scale(' + scale + ')'; // Skalierung des Schattens anwenden
+    }
+
+    // Funktion zur Berechnung des Skalierungsfaktors für den Schatten
+    function calculateShadowScale(rotation) {
+        // Bei 0%, 50% und 100% Rotation bleibt der Schatten in voller Größe (scale = 1)
+        if (rotation === 0 || rotation === 180 || rotation === 360) {
+            return 1;
+        } else {
+            // Zwischen diesen Punkten wird der Schatten kleiner
+            var scale = 0.5 + Math.cos(rotation * Math.PI / 180) * 0.5;
+            return scale;
+        }
+    }
+
+    // Funktion zur Ermittlung des aktuellen Rotationswinkels des Elements
+    function getCurrentRotation(el) {
+        var st = window.getComputedStyle(el, null);
+        var tr = st.getPropertyValue('transform') ||
+                 st.getPropertyValue('-webkit-transform') ||
+                 st.getPropertyValue('-moz-transform') ||
+                 st.getPropertyValue('-ms-transform') ||
+                 st.getPropertyValue('-o-transform');
+        var values = tr.split('(')[1].split(')')[0].split(',');
+        var a = values[0];
+        var b = values[1];
+        var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+        return (angle < 0) ? angle + 360 : angle; // Normalisierung des Winkels
+    }
+
+    // Event-Listener für die Animation des Logos
+    logo.addEventListener('animationiteration', adjustShadowSize);
+});
