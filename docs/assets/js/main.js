@@ -531,21 +531,3 @@ document.addEventListener('DOMContentLoaded', function() {
     clickCount++; // Zähle Klick nur, wenn keine Animation läuft
 });
 });
-
-@keyframes spinAndShadow {
-    0% {
-        transform: rotateY(0deg);
-    }
-    25% {
-        transform: rotateY(90deg);
-    }
-    50% {
-        transform: rotateY(180deg);
-    }
-    75% {
-        transform: rotateY(270deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
-}
