@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3500);
         }
     }
-/*
+
     // Funktion zum Beenden der Logo-Drehanimation
     function handleAnimationEnd() {
         logoContainer.style.transition = 'transform 1s ease';
@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animationInProgress = false;
         logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
     }
-
+/*
 // Funktion zum Starten der Logo-Drehanimation
 function toggleSpin() {
     console.log("Toggle Spin aufgerufen");
