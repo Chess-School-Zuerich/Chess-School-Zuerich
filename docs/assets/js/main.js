@@ -396,44 +396,22 @@
 
 })(jQuery);
 
-
-const hintStar = document.querySelector('.hint-star');
-
-// Funktion zum Anzeigen des Sternchens
-function showHintStar() {
-    hintStar.style.display = 'block';
-}
-
-// Funktion zum Verbergen des Sternchens
-function hideHintStar() {
-    hintStar.style.display = 'none';
-}
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
+    // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
-    var logo = document.querySelector('.logo');
+    var logo = document.querySelector('.logo.spinAndShadow');
     var isSpinning = false;
     var confirmBoxShown = false;
-    var animationInProgress = false; // Neue Variable, um die Animation zu verfolgen
+    var animationInProgress = false;
+    var clickCount = 0;
+    var hintStar = document.querySelector('.hint-star');
 
+    // Bestätigungsdialog-Elemente und -Logik
     var confirmBox = document.getElementById('customConfirmBox');
     var confirmYes = document.getElementById('confirmYes');
     var confirmNo = document.getElementById('confirmNo');
-    var clickCount = 0;
 
-    function showConfirmBox() {
-        if (!confirmBoxShown) {
-            setTimeout(function() {
-                confirmBox.style.display = 'block';
-                confirmBoxShown = true;
-            }, 3500);
-        }
-    }
-
+    // Event Listener für den Bestätigungsdialog
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
         confirmBox.style.display = 'none';
@@ -443,52 +421,55 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBox.style.display = 'none';
     });
 
+    // Funktion zum Anzeigen des Bestätigungsdialogs
+    function showConfirmBox() {
+        if (!confirmBoxShown) {
+            setTimeout(function() {
+                confirmBox.style.display = 'block';
+                confirmBoxShown = true;
+            }, 3500);
+        }
+    }
+
+    // Funktion zum Beenden der Logo-Drehanimation
     function handleAnimationEnd() {
         logoContainer.style.transition = 'transform 1s ease';
         logoContainer.style.transform = 'scale(1)';
         logo.classList.remove('spinAndShadow');
         isSpinning = false;
         logo.removeEventListener('animationend', handleAnimationEnd);
-        animationInProgress = false; // Animation ist beendet
+        animationInProgress = false;
     }
 
-   function toggleSpin() {
-	   console.log("Toggle Spin aufgerufen");
-    animationInProgress = true; // Markiere, dass eine Animation läuft
-    logo.classList.remove('spinAndShadow'); // Entfernen der Klasse, um die Animation zurückzusetzen
-    void logo.offsetWidth; // Trigger eines reflow, um die Animation zurückzusetzen
-    logo.classList.add('spinAndShadow'); // Hinzufügen der Klasse, um die Animation zu starten
+    // Funktion zum Starten der Logo-Drehanimation
+    function toggleSpin() {
+        console.log("Toggle Spin aufgerufen");
+        animationInProgress = true;
+        logo.classList.remove('spinAndShadow');
+        void logo.offsetWidth;
+        logo.classList.add('spinAndShadow');
 
-
-	   
         if (!isSpinning) {
             logoContainer.style.transition = 'transform 1s ease';
             logoContainer.style.transform = 'scale(1.05)';
             logo.classList.add('spinAndShadow');
             isSpinning = true;
             logo.addEventListener('animationend', handleAnimationEnd);
-            animationInProgress = true; // Animation hat begonnen
+            animationInProgress = true;
         }
     }
 
-    setTimeout(function() {
-        toggleSpin();
-    }, 800);
-
-/*
-
-	
+    // Event Listener für Logo-Klick
     logo.addEventListener('click', function() {
-        if (!animationInProgress) { // Nur wenn keine Animation aktiv ist
+        if (!animationInProgress) {
             toggleSpin();
             clickCount++;
 
             if (clickCount === 5) {
-                animationInProgress = true; // Animation startet
+                animationInProgress = true;
                 logo.classList.add('fall');
-
                 setTimeout(function() {
-                    animationInProgress = false; // Animation ist beendet
+                    animationInProgress = false;
                 }, 2000);
             }
 
@@ -497,82 +478,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-});
 
-*/
-
-
-
-	logo.addEventListener('click', function() {
-    if (animationInProgress) {
-        return; // Ignoriere Klicks, wenn eine Animation läuft
+    // Funktionen für das Sternchen-Element
+    function showHintStar() {
+        hintStar.style.display = 'block';
     }
 
-    toggleSpin(); // Spin-Animation starten
-    animationInProgress = true; // Markiere, dass eine Animation läuft
-
-    logo.addEventListener('animationend', function() {
-        // Warte eine zusätzliche Zeit, bevor die nächste Aktion ausgeführt wird
-        setTimeout(() => {
-            animationInProgress = false; // Markiere, dass die Animation beendet ist
-
-            if (clickCount === 5) {
-                logo.classList.add('fall'); // Starten der Fall-Animation
-                animationInProgress = true;
-            }
-
-            if (clickCount === 2 && !confirmBoxShown) {
-                showConfirmBox();
-            }
-        }, 500); // Verzögerung von 500 Millisekunden
-
-    }, { once: true });
-
-    clickCount++; // Zähle Klick nur, wenn keine Animation läuft
-});
-});
-
-
-
-// JavaScript-Code für die dynamische Schattenanpassung
-document.addEventListener('DOMContentLoaded', function() {
-    var logo = document.querySelector('.logo'); // Auswahl des Logo-Elements
-    var shadow = document.querySelector('.logo-shadow'); // Auswahl des Schatten-Elements
-
-    // Funktion zur Anpassung der Schattengröße
-    function adjustShadowSize() {
-        var rotation = getCurrentRotation(logo); // Aktuellen Rotationswinkel des Logos ermitteln
-        var scale = calculateShadowScale(rotation); // Skalierungsfaktor für den Schatten basierend auf dem Rotationswinkel berechnen
-        shadow.style.transform = 'scale(' + scale + ')'; // Skalierung des Schattens anwenden
+    function hideHintStar() {
+        hintStar.style.display = 'none';
     }
 
-    // Funktion zur Berechnung des Skalierungsfaktors für den Schatten
-    function calculateShadowScale(rotation) {
-        // Bei 0%, 50% und 100% Rotation bleibt der Schatten in voller Größe (scale = 1)
-        if (rotation === 0 || rotation === 180 || rotation === 360) {
-            return 1;
-        } else {
-            // Zwischen diesen Punkten wird der Schatten kleiner
-            var scale = 0.5 + Math.cos(rotation * Math.PI / 180) * 0.5;
-            return scale;
-        }
-    }
-
-    // Funktion zur Ermittlung des aktuellen Rotationswinkels des Elements
-    function getCurrentRotation(el) {
-        var st = window.getComputedStyle(el, null);
-        var tr = st.getPropertyValue('transform') ||
-                 st.getPropertyValue('-webkit-transform') ||
-                 st.getPropertyValue('-moz-transform') ||
-                 st.getPropertyValue('-ms-transform') ||
-                 st.getPropertyValue('-o-transform');
-        var values = tr.split('(')[1].split(')')[0].split(',');
-        var a = values[0];
-        var b = values[1];
-        var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-        return (angle < 0) ? angle + 360 : angle; // Normalisierung des Winkels
-    }
-
-    // Event-Listener für die Animation des Logos
-    logo.addEventListener('animationiteration', adjustShadowSize);
+    // Aufruf der initialen Funktionen oder Einstellungen
+    // ...
 });
