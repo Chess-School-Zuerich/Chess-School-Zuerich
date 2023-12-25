@@ -395,7 +395,7 @@
 					});
 
 })(jQuery);
-/*
+
 document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var clickCount = 0;
     var hintStar = document.querySelector('.hint-star');
 
-*/
+
 
     // Bestätigungsdialog-Elemente und -Logik
     var confirmBox = document.getElementById('customConfirmBox');
@@ -459,7 +459,7 @@ function toggleSpin() {
         isSpinning = true;
     }
 }
-/*
+
 // Event Listener für das Ende der Logo-Animation
 logo.addEventListener('animationend', function() {
     // Beendet die Schatten-Animation, wenn die Logo-Animation endet
@@ -470,10 +470,10 @@ logo.addEventListener('animationend', function() {
 });
 
 
-*/
+
 	
     // Event Listener für Logo-Klick
-/*    logo.addEventListener('click', function() {   
+   logo.addEventListener('click', function() {   
 	   
         if (!animationInProgress) {
             toggleSpin();
@@ -491,7 +491,7 @@ logo.addEventListener('animationend', function() {
                 showConfirmBox();
             }
         }
-    });   */
+    });   
 
     // Funktionen für das Sternchen-Element
     function showHintStar() {
