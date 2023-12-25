@@ -1862,25 +1862,6 @@ input, select, textarea {
     left: 0;
     border-radius: 50%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-    animation: spinAndShadow 3s linear;
-}
-
-@keyframes spinAndShadow {
-    0% {
-        transform: rotateY(0deg);
-    }
-    25% {
-        transform: rotateY(90deg);
-    }
-    50% {
-        transform: rotateY(180deg);
-    }
-    75% {
-        transform: rotateY(270deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
 }
 
 .logo img {
@@ -1892,7 +1873,6 @@ input, select, textarea {
 .logo img:hover {
     filter: brightness(70%);
 }
-
 
 @keyframes fallAndFlip {
     0% {
