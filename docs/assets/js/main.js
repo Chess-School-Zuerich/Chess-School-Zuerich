@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var confirmBox = document.getElementById('customConfirmBox');
     var confirmYes = document.getElementById('confirmYes');
     var confirmNo = document.getElementById('confirmNo');
-/*
+
     // Event Listener für den Bestätigungsdialog
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
     confirmNo.addEventListener('click', function() {
         confirmBox.style.display = 'none';
     });
-
+/*
     // Funktion zum Anzeigen des Bestätigungsdialogs
     function showConfirmBox() {
         if (!confirmBoxShown) {
