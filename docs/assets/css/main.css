@@ -1849,10 +1849,13 @@ input, select, textarea {
 
 
 .logo-container {
-    transition: transform 1s ease; /* Weicher Übergang für Vergrößerung/Verkleinerung */
-    display: inline-block; /* oder flex, je nach Bedarf */
-padding: 20px; /* oder ein anderer passender Wert */
-	 overflow: hidden;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+    animation: spinAndShadow 3s linear;
 }
 
 
@@ -1863,23 +1866,18 @@ padding: 20px; /* oder ein anderer passender Wert */
 @keyframes spinAndShadow {
     0% {
         transform: rotateY(0deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten am Anfang */
     }
     25% {
         transform: rotateY(90deg);
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);
     }
     50% {
         transform: rotateY(180deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
     }
     75% {
         transform: rotateY(270deg);
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.8);
     }
     100% {
         transform: rotateY(360deg);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Stärkerer Schatten am Ende */
     }
 }
 
@@ -1889,14 +1887,12 @@ padding: 20px; /* oder ein anderer passender Wert */
     animation: spinAndShadow 3s linear;
 }
 
-
-
 .logo-shadow {
-    width: 250px; /* Anpassen an die Größe deines Logos */
-    height: 250px; /* Anpassen an die Größe deines Logos */
-    border-radius: 50%;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
@@ -1934,14 +1930,10 @@ padding: 20px; /* oder ein anderer passender Wert */
     display: block;
 }
 
-
 .logo img {
-    width: 25vw; 
-    min-width: 85px; 
-    max-width: 250px; 
+    width: 100%;
     height: auto;
     border-radius: 50%;
-    transition: filter 0.3s ease; /* Entfernen von box-shadow aus der Transition */
 }
 
 
