@@ -400,6 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
     var logo = document.querySelector('.logo.spinAndShadow');
+    var logoShadow = document.querySelector('.logo-shadow'); // Hinzufügen des Schattenelements
     var isSpinning = false;
     var confirmBoxShown = false;
     var animationInProgress = false;
@@ -439,6 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isSpinning = false;
         logo.removeEventListener('animationend', handleAnimationEnd);
         animationInProgress = false;
+        logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
     }
 
     // Funktion zum Starten der Logo-Drehanimation
@@ -456,6 +458,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isSpinning = true;
             logo.addEventListener('animationend', handleAnimationEnd);
             animationInProgress = true;
+            logoShadow.style.animation = 'shadowSpin 3s linear 1'; // Startet Schatten-Animation
         }
     }
 
