@@ -1874,7 +1874,7 @@ input, select, textarea {
 }
 
 /* Schatten-Animation */
-@keyframes shadowSpin {
+@keyframes spin {
   0%, 50%, 100% {
     transform: scale(1); /* Normalgröße bei Start, Mitte und Ende */
   }
