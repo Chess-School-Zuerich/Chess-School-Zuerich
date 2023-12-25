@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animationInProgress = false;
         logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
     }
-/*
+
 // Funktion zum Starten der Logo-Drehanimation
 function toggleSpin() {
     console.log("Toggle Spin aufgerufen");
@@ -459,7 +459,7 @@ function toggleSpin() {
         isSpinning = true;
     }
 }
-
+/*
 // Event Listener für das Ende der Logo-Animation
 logo.addEventListener('animationend', function() {
     // Beendet die Schatten-Animation, wenn die Logo-Animation endet
