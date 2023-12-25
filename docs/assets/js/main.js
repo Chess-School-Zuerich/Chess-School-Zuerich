@@ -443,31 +443,31 @@ document.addEventListener('DOMContentLoaded', function() {
         logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
     }
 
-   function toggleSpin() {
+// Funktion zum Starten der Logo-Drehanimation
+function toggleSpin() {
     console.log("Toggle Spin aufgerufen");
+
     if (!isSpinning) {
         // Animation starten
-        logo.style.animation = 'spinAndShadow 3s linear 1';
-        logoShadow.style.animation = 'shadowSpin 3s linear 1'; // Schattenanimation starten
-        isSpinning = true;
         animationInProgress = true;
-    } else {
-        // Animation stoppen
-        logo.style.animation = 'none';
-        logoShadow.style.animation = 'none'; // Schattenanimation stoppen
-        isSpinning = false;
-        animationInProgress = false;
+        logo.classList.remove('spinAndShadow');
+        void logo.offsetWidth; // Trigger reflow für Neustart der Animation
+        logo.classList.add('spinAndShadow');
+        logoShadow.style.animation = 'shadowSpin 3s linear 1'; // Schatten-Animation starten
+        isSpinning = true;
     }
-    logo.addEventListener('animationend', handleAnimationEnd);
 }
-
-
 
 // Event Listener für das Ende der Logo-Animation
 logo.addEventListener('animationend', function() {
+    // Beendet die Schatten-Animation, wenn die Logo-Animation endet
+    logoShadow.style.animation = 'none';
     isSpinning = false;
-    logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
+    animationInProgress = false;
+    logo.classList.remove('spinAndShadow');
 });
+
+
 
 	
     // Event Listener für Logo-Klick
