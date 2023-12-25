@@ -1846,7 +1846,6 @@ input, select, textarea {
 
 
 
-
 .logo-container {
     position: relative;
     width: 250px;
@@ -1864,13 +1863,12 @@ input, select, textarea {
     height: 100%;
     border-radius: 50%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-    z-index: -1;
+    z-index: 0; /* Erhöht den z-index */
 }
 
 .logo-container .logo.spinAndShadow, .logo-container::before {
     animation: spinAndShadow 3s linear;
 }
-
 
 @keyframes spinAndShadow {
     0% {
@@ -1890,12 +1888,16 @@ input, select, textarea {
     }
 }
 
-.logo-shadow {
+.logo img {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
+    border-radius: 50%;
+    position: relative; /* Stellt das Bild über den Schatten */
+    z-index: 1; /* Stellt das Bild über den Schatten */
+}
+
+.logo img:hover {
+    filter: brightness(70%);
 }
 
 @keyframes fallAndFlip {
@@ -1912,16 +1914,5 @@ input, select, textarea {
 .logo.fall {
     animation: fallAndFlip 5s ease-in forwards;
 }
-
-.logo img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.logo img:hover {
-    filter: brightness(70%);
-}
-
 
 
