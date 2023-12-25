@@ -459,7 +459,7 @@ function toggleSpin() {
         isSpinning = true;
     }
 }
-/*
+
 // Event Listener für das Ende der Logo-Animation
 logo.addEventListener('animationend', function() {
     // Beendet die Schatten-Animation, wenn die Logo-Animation endet
@@ -470,7 +470,7 @@ logo.addEventListener('animationend', function() {
 });
 
 
-
+/*
 	
     // Event Listener für Logo-Klick
    logo.addEventListener('click', function() {   
