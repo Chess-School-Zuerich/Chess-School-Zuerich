@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var clickCount = 0;
     var hintStar = document.querySelector('.hint-star');
 
-
+/*
 
     // Bestätigungsdialog-Elemente und -Logik
     var confirmBox = document.getElementById('customConfirmBox');
