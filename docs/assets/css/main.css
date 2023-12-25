@@ -1873,8 +1873,21 @@ input, select, textarea {
     filter: brightness(70%);
 }
 
+
+
+/* Animation für das Drehen des Logos */
+@keyframes spinAndShadow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo.spinAndShadow {
+    animation: spinAndShadow 3s linear infinite;
+}
+
 /* Schatten-Animation */
-@keyframes spin {
+
+@keyframes shadowSpin {
   0%, 50%, 100% {
     transform: scale(1); /* Normalgröße bei Start, Mitte und Ende */
   }
@@ -1892,7 +1905,7 @@ input, select, textarea {
   position: absolute;
   bottom: -10px; /* Positionierung unter dem Logo */
   z-index: -1;
-  animation: shadowSpin 3s linear infinite;
+ animation: shadowSpin 3s linear infinite;
 }
 
 
