@@ -1847,8 +1847,6 @@ input, select, textarea {
 
 
 
-
-
 .logo-container {
     width: 250px;
     height: 250px;
@@ -1858,11 +1856,6 @@ input, select, textarea {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
     animation: spinAndShadow 3s linear;
 }
-
-
-
-
-
 
 @keyframes spinAndShadow {
     0% {
@@ -1882,12 +1875,6 @@ input, select, textarea {
     }
 }
 
-
-
-.logo.spinAndShadow {
-    animation: spinAndShadow 3s linear;
-}
-
 .logo-shadow {
     width: 100%;
     height: 100%;
@@ -1896,17 +1883,13 @@ input, select, textarea {
     left: 0;
 }
 
-
-
-
-
 @keyframes fallAndFlip {
     0% {
         transform: translateY(0);
         opacity: 1;
     }
     100% {
-        transform: translateY(100vh); /* Bewegt das Logo nach unten */
+        transform: translateY(100vh);
         opacity: 0;
     }
 }
@@ -1915,32 +1898,15 @@ input, select, textarea {
     animation: fallAndFlip 5s ease-in forwards;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.logo img:last-child {
-    z-index: 1;
-    display: block;
-}
-
 .logo img {
     width: 100%;
     height: auto;
     border-radius: 50%;
 }
 
-
-
 .logo img:hover {
-    filter: brightness(70%); /* Leichte Verdunklung */
+    filter: brightness(70%);
 }
+
 
 
