@@ -505,3 +505,4 @@ logo.addEventListener('animationend', function() {
     // Aufruf der initialen Funktionen oder Einstellungen
     // ...
 });
+*/
