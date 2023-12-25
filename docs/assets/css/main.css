@@ -1875,14 +1875,18 @@ input, select, textarea {
 
 
 .logo-shadow {
-    width: [gleiche Breite wie das Logo];
-    height: [gleiche Höhe wie das Logo];
-    background: [Schattenfarbe]; 
-    position: [gleiche Positionierung wie das Logo];
+    width: 250px; /* Gleiche Breite wie das Logo */
+    height: 250px; /* Gleiche Höhe wie das Logo */
+    background: rgba(0, 0, 0, 0.5); /* Schattenfarbe, anpassen nach Bedarf */
+    position: absolute; /* Gleiche Positionierung wie das Logo */
+    top: 0;
+    left: 0;
+    border-radius: 50%; /* Falls das Logo rund ist */
     opacity: 0; /* Anfangs unsichtbar */
     transition: transform 0.3s; /* Sanfter Übergang der Transformation */
-    /* Weitere Stilangaben nach Bedarf */
+    z-index: -1; /* Stellt sicher, dass der Schatten hinter dem Logo ist */
 }
+
 
 
 
