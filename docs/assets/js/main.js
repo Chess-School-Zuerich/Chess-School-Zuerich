@@ -471,7 +471,7 @@ logo.addEventListener('animationend', function() {
 
 	
     // Event Listener für Logo-Klick
-/*    logo.addEventListener('click', function() {   */
+/*    logo.addEventListener('click', function() {   
 	   
         if (!animationInProgress) {
             toggleSpin();
@@ -489,7 +489,7 @@ logo.addEventListener('animationend', function() {
                 showConfirmBox();
             }
         }
-    });
+    });   */
 
     // Funktionen für das Sternchen-Element
     function showHintStar() {
