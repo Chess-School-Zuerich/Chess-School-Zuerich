@@ -443,25 +443,33 @@ document.addEventListener('DOMContentLoaded', function() {
         logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
     }
 
-    // Funktion zum Starten der Logo-Drehanimation
-    function toggleSpin() {
-        console.log("Toggle Spin aufgerufen");
+   function toggleSpin() {
+    console.log("Toggle Spin aufgerufen");
+    if (!isSpinning) {
+        // Animation starten
+        logo.style.animation = 'spinAndShadow 3s linear 1';
+        logoShadow.style.animation = 'shadowSpin 3s linear 1'; // Schattenanimation starten
+        isSpinning = true;
         animationInProgress = true;
-        logo.classList.remove('spinAndShadow');
-        void logo.offsetWidth;
-        logo.classList.add('spinAndShadow');
-
-        if (!isSpinning) {
-            logoContainer.style.transition = 'transform 1s ease';
-            logoContainer.style.transform = 'scale(1.05)';
-            logo.classList.add('spinAndShadow');
-            isSpinning = true;
-            logo.addEventListener('animationend', handleAnimationEnd);
-            animationInProgress = true;
-            logoShadow.style.animation = 'shadowSpin 3s linear 1'; // Startet Schatten-Animation
-        }
+    } else {
+        // Animation stoppen
+        logo.style.animation = 'none';
+        logoShadow.style.animation = 'none'; // Schattenanimation stoppen
+        isSpinning = false;
+        animationInProgress = false;
     }
+    logo.addEventListener('animationend', handleAnimationEnd);
+}
 
+
+
+// Event Listener für das Ende der Logo-Animation
+logo.addEventListener('animationend', function() {
+    isSpinning = false;
+    logoShadow.style.animation = 'none'; // Stoppt Schatten-Animation
+});
+
+	
     // Event Listener für Logo-Klick
     logo.addEventListener('click', function() {
         if (!animationInProgress) {
