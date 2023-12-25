@@ -395,7 +395,7 @@
 					});
 
 })(jQuery);
-/*
+
 document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
@@ -507,4 +507,4 @@ logo.addEventListener('animationend', function() {
 
     
 });
-*/
+
