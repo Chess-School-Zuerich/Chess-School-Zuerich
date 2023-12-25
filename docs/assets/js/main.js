@@ -470,7 +470,7 @@ logo.addEventListener('animationend', function() {
 });
 
 
-/*
+
 	
     // Event Listener für Logo-Klick
    logo.addEventListener('click', function() {   
@@ -492,7 +492,7 @@ logo.addEventListener('animationend', function() {
             }
         }
     });   
-
+/*
     // Funktionen für das Sternchen-Element
     function showHintStar() {
         hintStar.style.display = 'block';
