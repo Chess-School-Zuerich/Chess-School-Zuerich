@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
     confirmNo.addEventListener('click', function() {
         confirmBox.style.display = 'none';
     });
-/*
+
     // Funktion zum Anzeigen des Bestätigungsdialogs
     function showConfirmBox() {
         if (!confirmBoxShown) {
@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3500);
         }
     }
-
+/*
     // Funktion zum Beenden der Logo-Drehanimation
     function handleAnimationEnd() {
         logoContainer.style.transition = 'transform 1s ease';
