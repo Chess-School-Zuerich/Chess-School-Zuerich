@@ -395,7 +395,7 @@
 					});
 
 })(jQuery);
-
+/*
 document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
@@ -492,7 +492,7 @@ logo.addEventListener('animationend', function() {
             }
         }
     });   
-/*
+
     // Funktionen für das Sternchen-Element
     function showHintStar() {
         hintStar.style.display = 'block';
@@ -505,6 +505,6 @@ logo.addEventListener('animationend', function() {
     // Aufruf der initialen Funktionen oder Einstellungen
     // ...
 
-    */
+    
 });
-
+*/
