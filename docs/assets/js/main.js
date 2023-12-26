@@ -399,6 +399,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
+    var destroyedLogo = document.querySelector('.logo-destroyed');
     var logo = document.querySelector('.logo.spinAndShadow');
     var logoShadow = document.querySelector('.logo-shadow'); // Hinzufügen des Schattenelements
     var isSpinning = false;
