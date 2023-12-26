@@ -1921,3 +1921,26 @@ input, select, textarea {
 
 
 
+/* Standardgröße des Zerstörungs-GIFs */
+.logo-destroyed img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Anpassungen für verschiedene Bildschirmgrößen */
+@media screen and (max-width: 736px) {
+    .logo-destroyed img {
+        width: 4.75rem;
+        height: 4.75rem;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    /* Fügen Sie hier ggf. weitere spezifische Anpassungen für das Zerstörungs-GIF hinzu */
+}
+
+
