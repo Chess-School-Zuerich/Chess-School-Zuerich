@@ -470,7 +470,7 @@ logo.addEventListener('animationend', function() {
 });
 
 
-
+/*
 	
     // Event Listener für Logo-Klick
    logo.addEventListener('click', function() {   
@@ -493,6 +493,39 @@ logo.addEventListener('animationend', function() {
         }
     });   
 
+
+
+*/
+
+logo.addEventListener('click', function() {
+    // Überprüfung, ob keine andere Animation im Gange ist
+    if (!animationInProgress) {
+        // Zählt nur, wenn keine andere Animation läuft
+        clickCount++;
+
+        // Führt die Spin-Animation aus, wenn das Logo weniger als dreimal angeklickt wurde
+        if (clickCount < 3) {
+            toggleSpin();
+        }
+    }
+
+    // Beim dritten Klick wird die Zerstörungsanimation ausgelöst
+    if (clickCount === 3) {
+        logo.style.display = 'none'; // Versteckt das ursprüngliche Logo
+        destroyedLogo.style.display = 'block'; // Zeigt das Zerstörungs-GIF
+    }
+
+    // Logik für die Bestätigungsbox nach dem zweiten Klick
+    if (clickCount === 2 && !confirmBoxShown) {
+        showConfirmBox();
+    }
+});
+
+
+
+	
+
+	
     // Funktionen für das Sternchen-Element
     function showHintStar() {
         hintStar.style.display = 'block';
