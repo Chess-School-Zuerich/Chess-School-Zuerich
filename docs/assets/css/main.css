@@ -1944,3 +1944,25 @@ input, select, textarea {
 }
 
 
+
+
+
+// Zentrierung des Logos auf Mobilen Geräten
+
+
+@media screen and (max-width: 736px) {
+    #header .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem; /* Oder den Abstand, den Sie wünschen */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header .logo {
+        /* Hier können Sie weitere Anpassungen für sehr kleine Bildschirme vornehmen */
+    }
+}
+
+
