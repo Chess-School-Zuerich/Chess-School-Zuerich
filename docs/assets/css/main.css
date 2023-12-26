@@ -1961,7 +1961,11 @@ input, select, textarea {
 
 @media screen and (max-width: 480px) {
     #header .logo {
-        /* Hier können Sie weitere Anpassungen für sehr kleine Bildschirme vornehmen */
+         #header .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1rem; /* Oder den Abstand, den Sie wünschen */
     }
 }
 
