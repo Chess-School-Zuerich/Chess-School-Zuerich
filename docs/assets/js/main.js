@@ -400,6 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auswahl der Elemente
     var logoContainer = document.querySelector('.logo-container');
     var destroyedLogo = document.querySelector('.logo-destroyed');
+    var crackedLogo = document.querySelector('.logo-cracked');
     var logo = document.querySelector('.logo.spinAndShadow');
     var logoShadow = document.querySelector('.logo-shadow'); // Hinzufügen des Schattenelements
     var isSpinning = false;
@@ -516,8 +517,17 @@ logo.addEventListener('click', function() {
         destroyedLogo.style.display = 'block'; // Zeigt das Zerstörungs-GIF
     }
 
+
+ // Beim zweiten Klick wird die Crack ausgelöst
+    if (clickCount === 2) {
+        destroyedLogo.style.display = 'none'; // Versteckt das ursprüngliche Logo
+        crackedLogo.style.display = 'block'; // Zeigt das crack-GIF
+    }
+
+	
+
     // Logik für die Bestätigungsbox nach dem zweiten Klick
-    if (clickCount === 2 && !confirmBoxShown) {
+    if (clickCount === 1 && !confirmBoxShown) {
         showConfirmBox();
     }
 });
