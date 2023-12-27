@@ -405,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var logoShadow = document.querySelector('.logo-shadow'); // Hinzufügen des Schattenelements
     var isSpinning = false;
     var confirmBoxShown = false;
+    var logoClickListenerAdded = false;
     var animationInProgress = true;
     var clickCount = 0;
     var hintStar = document.querySelector('.hint-star');
@@ -501,8 +502,8 @@ crackedLogo.addEventListener('click', function() {
 });
 
 	
-
-logo.addEventListener('click', function() {
+if (!logoClickListenerAdded) {
+    logo.addEventListener('click', function() {
     // Überprüfung, ob keine andere Animation im Gange ist
     if (!animationInProgress) {
         // Zählt nur, wenn keine andere Animation läuft
@@ -513,6 +514,7 @@ logo.addEventListener('click', function() {
             toggleSpin();
         }
     }
+			  
 
     // Beim dritten Klick wird die Zerstörungsanimation ausgelöst
     if (clickCount === 3) {
@@ -537,6 +539,9 @@ if (clickCount === 2) {
     }
 });
 
+
+	 logoClickListenerAdded = true; // Listener als hinzugefügt markieren
+}
 
 
 	
