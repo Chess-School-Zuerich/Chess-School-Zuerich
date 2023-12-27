@@ -1922,6 +1922,24 @@ input, select, textarea {
 
 
 /* Standardgröße des Zerstörungs-GIFs */
+.logo-crack img {
+    width: 100%;
+    height: auto;
+}
+
+
+.logo-crack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* anfangs versteckt */
+}
+
+
+
+/* Standardgröße des Zerstörungs-GIFs */
 .logo-destroyed img {
     width: 100%;
     height: auto;
