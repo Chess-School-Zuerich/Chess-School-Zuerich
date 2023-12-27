@@ -483,6 +483,7 @@ crackedLogo.addEventListener('click', function() {
             // Zeigt das Zerstörungs-GIF an
             destroyedLogo.style.display = 'block';
             crackedLogo.style.display = 'none'; // Versteckt das geknackte Logo
+	    logo.style.display = 'none';
         }
     }
 });
