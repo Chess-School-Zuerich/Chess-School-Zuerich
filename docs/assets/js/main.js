@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var logoShadow = document.querySelector('.logo-shadow'); // Hinzufügen des Schattenelements
     var isSpinning = false;
     var confirmBoxShown = false;
-    var animationInProgress = false;
+    var animationInProgress = true;
     var clickCount = 0;
     var hintStar = document.querySelector('.hint-star');
 
@@ -416,6 +416,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var confirmYes = document.getElementById('confirmYes');
     var confirmNo = document.getElementById('confirmNo');
 
+   window.addEventListener('load', function() {
+        // Warte eine bestimmte Zeit nach dem Laden der Seite
+        setTimeout(function() {
+            // Setze animationInProgress auf false, um Interaktionen zu ermöglichen
+            animationInProgress = false;
+        }, 3000); // Hier können Sie die Verzögerung anpassen
+    });
+
+    // Rest des Event-Listeners und Funktionen ...
+});
+
+
+	
     // Event Listener für den Bestätigungsdialog
     confirmYes.addEventListener('click', function() {
         window.location.href = '#anmelden';
