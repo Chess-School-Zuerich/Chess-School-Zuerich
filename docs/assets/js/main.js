@@ -472,32 +472,14 @@ logo.addEventListener('animationend', function() {
 });
 
 
-/*
-	
-    // Event Listener für Logo-Klick
-   logo.addEventListener('click', function() {   
-	   
-        if (!animationInProgress) {
-            toggleSpin();
-            clickCount++;
+crackedLogo.addEventListener('click', function() {
+    if (!animationInProgress) {
+        // Zählt nur, wenn keine andere Animation läuft
+        clickCount++;
 
-            if (clickCount === 5) {
-                animationInProgress = true;
-                logo.classList.add('fall');
-                setTimeout(function() {
-                    animationInProgress = false;
-                }, 2000);
-            }
-
-            if (clickCount === 2 && !confirmBoxShown) {
-                showConfirmBox();
-            }
-        }
-    });   
-
-
-
-*/
+        // Führen Sie Ihre Logik hier aus
+    }
+});
 
 logo.addEventListener('click', function() {
     // Überprüfung, ob keine andere Animation im Gange ist
