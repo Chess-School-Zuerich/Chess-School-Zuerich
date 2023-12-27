@@ -486,6 +486,8 @@ crackedLogo.addEventListener('click', function() {
     }
 });
 
+	
+
 logo.addEventListener('click', function() {
     // Überprüfung, ob keine andere Animation im Gange ist
     if (!animationInProgress) {
