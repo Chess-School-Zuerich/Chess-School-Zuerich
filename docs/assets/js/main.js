@@ -518,11 +518,13 @@ logo.addEventListener('click', function() {
     }
 
 
- // Beim zweiten Klick wird die Crack ausgelöst
-    if (clickCount === 2) {
+// Beim zweiten Klick wird die Crack ausgelöst
+if (clickCount === 2) {
+    setTimeout(function() {
         destroyedLogo.style.display = 'none'; // Versteckt das ursprüngliche Logo
         crackedLogo.style.display = 'block'; // Zeigt das crack-GIF
-    }
+    }, 3000); // 3000 Millisekunden Verzögerung (entspricht 3 Sekunden)
+}
 
 	
 
