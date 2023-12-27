@@ -424,8 +424,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000); // Hier können Sie die Verzögerung anpassen
     });
 
-    // Rest des Event-Listeners und Funktionen ...
-});
+
 
 
 	
