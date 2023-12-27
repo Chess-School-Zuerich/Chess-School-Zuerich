@@ -1851,8 +1851,6 @@ input, select, textarea {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-	left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
@@ -1967,33 +1965,5 @@ input, select, textarea {
 
 
 
-@media screen and (max-width: 480px) {
-    /* Fügen Sie hier ggf. weitere spezifische Anpassungen für das Zerstörungs-GIF hinzu */
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 736px) {
-    #header .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 1rem; /* Oder den Abstand, den Sie wünschen */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #header .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 1rem; /* Oder den Abstand, den Sie wünschen */
-    }
-}
 
 
