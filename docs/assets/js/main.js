@@ -475,10 +475,11 @@ logo.addEventListener('animationend', function() {
 crackedLogo.addEventListener('click', function() {
     if (!animationInProgress) {
         // Zählt nur, wenn keine andere Animation läuft
-        clickCount++;
+         clickCount = 2;
+	    clickCount++;
 
         // Spezifische Logik für das geknackte Logo
-        if (clickCount === 1) {
+        if (clickCount === 3) {
             // Zeigt das Zerstörungs-GIF an
             destroyedLogo.style.display = 'block';
             crackedLogo.style.display = 'none'; // Versteckt das geknackte Logo
