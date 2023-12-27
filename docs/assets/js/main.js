@@ -519,6 +519,7 @@ if (!logoClickListenerAdded) {
     // Beim dritten Klick wird die Zerstörungsanimation ausgelöst
     if (clickCount === 3) {
         logo.style.display = 'none'; // Versteckt das ursprüngliche Logo
+	crackedLogo.style.display = 'none';
         destroyedLogo.style.display = 'block'; // Zeigt das Zerstörungs-GIF
     }
 
