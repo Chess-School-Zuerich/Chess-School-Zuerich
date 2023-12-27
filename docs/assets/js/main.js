@@ -477,7 +477,12 @@ crackedLogo.addEventListener('click', function() {
         // Zählt nur, wenn keine andere Animation läuft
         clickCount++;
 
-        // Führen Sie Ihre Logik hier aus
+        // Spezifische Logik für das geknackte Logo
+        if (clickCount === 1) {
+            // Zeigt das Zerstörungs-GIF an
+            destroyedLogo.style.display = 'block';
+            crackedLogo.style.display = 'none'; // Versteckt das geknackte Logo
+        }
     }
 });
 
