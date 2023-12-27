@@ -1922,13 +1922,13 @@ input, select, textarea {
 
 
 /* Standardgröße des Zerstörungs-GIFs */
-.logo-crack img {
+.logo-cracked img {
     width: 100%;
     height: auto;
 }
 
 
-.logo-crack {
+.logo-cracked {
     position: absolute;
     top: 0;
     left: 0;
